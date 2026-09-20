@@ -81,8 +81,13 @@
       "priority": "high"
     },
     {
-      "item": "konopkja/ethux-design 的 7 個子 Skill（approvals/gas/multichain/onboarding/safety/signing/wallets）結構上符合獨立建檔條件，但建檔會超過首次 20 個上限——已詢問使用者是否建檔、建幾個、或留到下一批次，待回覆",
-      "priority": "waiting_on_user"
+      "item": "konopkja/ethux-design 的 7 個子 Skill（approvals/gas/multichain/onboarding/safety/signing/wallets）結構上符合獨立建檔條件，但使用者已決定：維持首次 20 上限，暫不新增獨立 Notion 記錄，留到下一批次；名稱／路徑／來源版本已記在 memory/skill-index.json 的 bb21949b19c2 條目（required_subresources）。下一批次建檔時直接取用該筆記錄即可，不必重新調查。",
+      "priority": "next_batch",
+      "commit_at_investigation": "3de26d364f61aa87fcc2765c4b24e5b235072324"
+    },
+    {
+      "item": "konopkja/ethux-design（bb21949b19c2）日後若執行 get_skill 下載完整套件，即使 7 個子 Skill 未獨立建檔於 Notion，仍須完整保留 skills/{approvals,gas,multichain,onboarding,safety,signing,wallets}/SKILL.md 與 skills/shared/references/ 三個共用檔案——這些是父 Skill（索引／路由邏輯）能正常運作的必要資源，不得因為沒有獨立記錄而省略",
+      "priority": "note_for_future_get_skill"
     },
     {
       "item": "aa8f8ab8cb24（design-system-library）與其衍生來源 VoltAgent/awesome-design-md 皆無 LICENSE 檔案，授權條款不明確，需於該筆執行完整評估時一併處理可信度扣分",

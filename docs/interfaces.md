@@ -69,6 +69,12 @@ repo 的 `updated_at` 只要 metadata 異動就會更新，`pushed_at` 才是真
 
 套件與分析必須對應同一版本；若版本已變更，先重新分析再回傳。
 
+**父子 Skill 的必要資源**：若某 Skill 是索引／路由型（例如指向多個子 Skill 的入口），
+即使子 Skill 未在 Notion 獨立建檔，`get_skill` 下載父 Skill 的完整套件時仍須包含
+其運作所需的子目錄／子檔案，不得因為沒有獨立記錄而省略——「暫不獨立建檔」只影響
+Notion 目錄的收錄範圍，不影響單一套件本身該有的完整性。實例見
+`memory/skill-index.json` 的 `bb21949b19c2`（konopkja/ethux-design）條目。
+
 ## refresh_skills
 
 輸入：`{ "scope": "all|<tag>|[skill_ids]", "mode": "check_only|apply_updates" }`

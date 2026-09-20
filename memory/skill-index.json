@@ -137,7 +137,51 @@
     "last_check_succeeded": "2026-09-20",
     "tags": [
       "UI/UX"
-    ]
+    ],
+    "investigated_commit": "3de26d364f61aa87fcc2765c4b24e5b235072324",
+    "sub_skills_not_independently_filed": [
+      {
+        "name": "approvals",
+        "path": "skills/approvals/SKILL.md"
+      },
+      {
+        "name": "gas",
+        "path": "skills/gas/SKILL.md"
+      },
+      {
+        "name": "multichain",
+        "path": "skills/multichain/SKILL.md"
+      },
+      {
+        "name": "onboarding",
+        "path": "skills/onboarding/SKILL.md"
+      },
+      {
+        "name": "safety",
+        "path": "skills/safety/SKILL.md"
+      },
+      {
+        "name": "signing",
+        "path": "skills/signing/SKILL.md"
+      },
+      {
+        "name": "wallets",
+        "path": "skills/wallets/SKILL.md"
+      }
+    ],
+    "required_subresources_for_get_skill": [
+      "skills/approvals/SKILL.md",
+      "skills/gas/SKILL.md",
+      "skills/multichain/SKILL.md",
+      "skills/onboarding/SKILL.md",
+      "skills/safety/SKILL.md",
+      "skills/signing/SKILL.md",
+      "skills/wallets/SKILL.md",
+      "skills/shared/references/eip5792.md",
+      "skills/shared/references/irreversibility.md",
+      "skills/shared/references/stuck-transactions.md"
+    ],
+    "filing_decision": "使用者於 2026-09-20 決定：維持 20 上限，暫不獨立建檔，留到下一批次；但 get_skill 下載父 Skill 套件時仍須包含上述必要資源"
   },
   {
     "skill_id": "6cc595223461",
