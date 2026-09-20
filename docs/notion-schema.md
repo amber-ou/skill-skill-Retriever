@@ -9,8 +9,8 @@
 | 群組 | 欄位名稱 | 型別 | 說明 |
 | --- | --- | --- | --- |
 | 基本識別 | Name | title | Skill 原始名稱（保留原文） |
-| 基本識別 | Skill ID | rich_text | 內部穩定 ID，格式 `sha1(repo_full_name + skill_path)[:12]` |
-| 基本識別 | Tags | multi_select | 分類／標籤，如 UI/UX |
+| 基本識別 | Skill ID | rich_text | 內部穩定 ID，12 位十六進位亂數字串（建立時隨機產生，非來源資料的雜湊值），建立後終身不變 |
+| 基本識別 | Tags | multi_select | **用途分類**（2026-09-20 起依完整內容標記，非僅名稱/描述）：`UI 設計`／`UX 研究`／`設計系統`／`無障礙`／`設計稽核`／`前端實作`／`行動介面`／`原型與互動`（可擴充；同一 Skill 可多個標籤；不得混入推薦狀態或授權疑慮） |
 | 基本識別 | Summary | rich_text | 用途摘要 |
 | 基本識別 | Repository | url | 來源 repo |
 | 基本識別 | Skill Path | rich_text | repo 內路徑 |
@@ -37,6 +37,12 @@
 | 維護 | Last Error | rich_text | 最近一次失敗原因（成功時清空） |
 | 人工內容 | User Notes | rich_text | **自動流程禁止覆寫** |
 | 人工內容 | Manual Feedback | rich_text | **自動流程禁止覆寫** |
+| 門檻與封存（2026-09-20 新增） | Archived | checkbox | 是否已封存（低於收錄門檻且無使用者例外）；封存**不是刪除**，原有分析內容全數保留 |
+| 門檻與封存 | Archive Reason | rich_text | 封存原因（含查核到的實際數值與查核時間） |
+| 門檻與封存 | Archived At | date | 封存時間 |
+| 門檻與封存 | User Specified Exception | checkbox | 使用者是否明確指定此筆為低於門檻的例外收錄；**只有使用者本人指定才能勾選，Agent 自行選入不算** |
+| 門檻與封存 | Exception Reason | rich_text | 例外原因 |
+| 門檻與封存 | Exception Source | rich_text | 例外的確認來源（例如使用者哪一次訊息指定） |
 
 頁面內容（每筆記錄詳細內容，不放進表格欄位）：
 - 評分理由與證據（對應四個面向，逐項列出 `docs/scoring-rules.md` 的 JSON 紀錄）
@@ -47,11 +53,15 @@
 
 ## 檢視（Views）
 
-1. **全部** — 無篩選，依 Last Check Succeeded 降冪。
-2. **可推薦** — `Recommendation Status = 可推薦`。
-3. **待處理** — `Recommendation Status in (待評估, 需人工確認)` 或 `Last Error is not empty`。
+1. **全部** — `Archived = false`，依 Last Check Succeeded 降冪。
+2. **可推薦** — `Archived = false` 且 `Recommendation Status = 可推薦`。
+3. **待處理** — `Archived = false` 且（`Recommendation Status in (待評估, 需人工確認)` 或 `Last Error is not empty`）。
+4. **依 TAG 分類**（2026-09-20 新增）— board 視圖，依 `Tags` 分組，`Archived = false`。
+5. **已移出**（2026-09-20 新增）— `Archived = true`，依 Archived At 降冪；獨立檢視供追溯封存項目，**不出現在上述 1–4 的預設檢視中**。
 
-不設分數為預設排序依據（避免把熱門度當唯一推薦指標）。
+不設分數為預設排序依據（避免把熱門度當唯一推薦指標）。所有預設瀏覽／推薦／TAG 分類檢視
+一律排除 `Archived = true` 的項目；查詢指定舊 Skill ID 時仍可查到封存記錄，但需明確告知
+已封存及原因，不得當成有效推薦回傳。
 
 ## 去重規則
 

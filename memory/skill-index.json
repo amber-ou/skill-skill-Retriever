@@ -14,7 +14,9 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "UI 設計",
+      "UX 研究",
+      "無障礙"
     ],
     "repo_pushed_at": "2026-08-14",
     "skill_file_last_modified_at": "2026-08-14",
@@ -25,7 +27,12 @@
     "confidence": "high",
     "license": "MIT (Szilárd Hajba)",
     "full_content_analyzed": true,
-    "notes": "24 個完整參考檔涵蓋幾乎所有 UX 面向；缺明確限制/前提說明段落，扣分。"
+    "notes": "24 個完整參考檔涵蓋幾乎所有 UX 面向；缺明確限制/前提說明段落，扣分。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=64（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "51df00b6a70e",
@@ -42,7 +49,8 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "UX 研究",
+      "設計稽核"
     ],
     "repo_pushed_at": "2026-04-10",
     "skill_file_last_modified_at": "2026-04-10",
@@ -53,7 +61,12 @@
     "confidence": "high",
     "license": "MIT (UES Contributors)",
     "full_content_analyzed": true,
-    "notes": "5 步驟 pipeline 高度可執行，含明確輸出模板；星數極少但實用度證據充分。"
+    "notes": "5 步驟 pipeline 高度可執行，含明確輸出模板；星數極少但實用度證據充分。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=1（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "bc9c284e5a10",
@@ -70,7 +83,8 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "設計稽核",
+      "無障礙"
     ],
     "utility_score": 84,
     "trustworthiness_score": 71,
@@ -84,7 +98,12 @@
     "skill_file_last_commit": "46b2a9387d06",
     "last_refresh_run_at": "2026-09-20T16:20:42Z",
     "last_refresh_run_type": "maintenance_drill_no_drift_found",
-    "last_refresh_run_result": "live HEAD commit eea862b35b6c472590c6c72b91e0cc2c184f5326 re-cloned and confirmed identical to analyzed_commit; no re-scoring needed"
+    "last_refresh_run_result": "live HEAD commit eea862b35b6c472590c6c72b91e0cc2c184f5326 re-cloned and confirmed identical to analyzed_commit; no re-scoring needed",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=25（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "14b7ae22b3f5",
@@ -101,7 +120,8 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "UX 研究",
+      "原型與互動"
     ],
     "repo_pushed_at": "2026-02-17",
     "skill_file_last_modified_at": "2026-02-17",
@@ -112,7 +132,12 @@
     "confidence": "high",
     "license": "MIT (Thomas Praun)",
     "full_content_analyzed": true,
-    "notes": "發現真實依賴：references/install-commands.md 明確以 `npx skills find ui-ux-pro-max` 尋找下游 Skill，這是透過通用市集查詢而非寫死特定 repo，無法確認就是 migueljnew-droid 那一筆（已更新 relationships.json）。"
+    "notes": "發現真實依賴：references/install-commands.md 明確以 `npx skills find ui-ux-pro-max` 尋找下游 Skill，這是透過通用市集查詢而非寫死特定 repo，無法確認就是 migueljnew-droid 那一筆（已更新 relationships.json）。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=11（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "e4e5c026b7c1",
@@ -129,7 +154,9 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "行動介面",
+      "UI 設計",
+      "無障礙"
     ],
     "repo_pushed_at": "2026-02-05",
     "skill_file_last_modified_at": "2026-02-05",
@@ -140,7 +167,12 @@
     "confidence": "medium",
     "license": "無 LICENSE 檔案",
     "full_content_analyzed": true,
-    "notes": "含可執行的驗證腳本（check-contrast.py 等），內容紮實，但完全沒有授權宣告，法律上預設「保留所有權利」。"
+    "notes": "含可執行的驗證腳本（check-contrast.py 等），內容紮實，但完全沒有授權宣告，法律上預設「保留所有權利」。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=75（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "cbef8a80b1bf",
@@ -157,7 +189,8 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "UI 設計",
+      "設計稽核"
     ],
     "repo_pushed_at": "2026-05-15",
     "skill_file_last_modified_at": "2026-05-15",
@@ -168,7 +201,12 @@
     "confidence": "high",
     "license": "MIT (Stephane Boghossian)",
     "full_content_analyzed": true,
-    "notes": "完整分析（第二輪已於前次追記關係釐清）；反 AI-slop 設計流程 + Playwright 驗證迴圈，工程品質高。"
+    "notes": "完整分析（第二輪已於前次追記關係釐清）；反 AI-slop 設計流程 + Playwright 驗證迴圈，工程品質高。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=4（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "bb21949b19c2",
@@ -185,7 +223,7 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "UX 研究"
     ],
     "investigated_commit": "3de26d364f61aa87fcc2765c4b24e5b235072324",
     "sub_skills_not_independently_filed": [
@@ -240,7 +278,12 @@
     "confidence": "medium",
     "license": "MIT (EthUX Contributors)",
     "full_content_analyzed": true,
-    "notes": "作為獨立收錄項目，頂層索引本身內容單薄（僅路由邏輯），真正實用內容在 7 個子 Skill（依使用者決定，本批次不獨立建檔，見 backlog）。"
+    "notes": "作為獨立收錄項目，頂層索引本身內容單薄（僅路由邏輯），真正實用內容在 7 個子 Skill（依使用者決定，本批次不獨立建檔，見 backlog）。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=8（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "6cc595223461",
@@ -257,7 +300,7 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "設計稽核"
     ],
     "repo_pushed_at": "2026-02-12",
     "skill_file_last_modified_at": "2026-02-12",
@@ -268,7 +311,12 @@
     "confidence": "medium",
     "license": "無授權宣告",
     "full_content_analyzed": true,
-    "notes": "設計審查工作流程極為嚴謹（Startup Protocol + 分階段核准機制），但完全沒有授權宣告。"
+    "notes": "設計審查工作流程極為嚴謹（Startup Protocol + 分階段核准機制），但完全沒有授權宣告。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=5（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "6c53224206d3",
@@ -285,7 +333,7 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "設計系統"
     ],
     "repo_pushed_at": "2026-06-17",
     "skill_file_last_modified_at": "2026-01-23",
@@ -296,7 +344,12 @@
     "confidence": "high",
     "license": "MIT (Matt Ström-Awn)",
     "full_content_analyzed": true,
-    "notes": "含 evaluations/test-cases.json 與 fixtures，顯示作者對內容做過驗證，罕見的高品質訊號。"
+    "notes": "含 evaluations/test-cases.json 與 fixtures，顯示作者對內容做過驗證，罕見的高品質訊號。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=15（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "aa8f8ab8cb24",
@@ -313,7 +366,7 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "設計系統"
     ],
     "repo_pushed_at": "2026-07-14",
     "skill_file_last_modified_at": "2026-04-06",
@@ -325,7 +378,12 @@
     "license": "README 聲明 MIT（無正式 LICENSE 檔），內容明確衍生自 VoltAgent/awesome-design-md",
     "full_content_analyzed": true,
     "notes": "58 個公司設計系統參考檔與 README 目錄完全對應；來源鏈已於前次追記釐清為「衍生自」。 | 2026-09-20 依 scoring-rules@1.1.0 的授權一致性規則修正：repo 內無正式 LICENSE 檔案，僅 README 聲明 MIT，且內容衍生自授權狀態同樣不明的 VoltAgent/awesome-design-md，屬「授權未落實聲稱」情形，recommendation_status 由「可推薦」改為「需人工確認」；可信度分數本身（84）不變，因為該分數反映的是五個子項的加權結果，而非「授權已釐清」的宣告。",
-    "scoring_rule_version": "scoring-rules@1.1.0"
+    "scoring_rule_version": "scoring-rules@1.1.0",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=10（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "bc8f5c0bb74a",
@@ -342,7 +400,7 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "UI 設計"
     ],
     "repo_pushed_at": "2026-03-12",
     "skill_file_last_modified_at": "2026-03-12",
@@ -353,7 +411,12 @@
     "confidence": "medium",
     "license": "README 有 MIT 徽章圖片，但無正式 LICENSE 檔",
     "full_content_analyzed": true,
-    "notes": "行銷用語誇張，但底層是真實可執行的 BM25 搜尋引擎（3 個 Python 腳本 + 20 個 CSV 資料庫），技巧數字（28）與實際技巧表格吻合。部分進階技巧需要付費的 GSAP Club 會員，屬需另外付費的外部依賴，已明確列出。與 sboghossian/design-skill 的關係已調查為「無明顯關聯」。"
+    "notes": "行銷用語誇張，但底層是真實可執行的 BM25 搜尋引擎（3 個 Python 腳本 + 20 個 CSV 資料庫），技巧數字（28）與實際技巧表格吻合。部分進階技巧需要付費的 GSAP Club 會員，屬需另外付費的外部依賴，已明確列出。與 sboghossian/design-skill 的關係已調查為「無明顯關聯」。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=8（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "e587c88401c0",
@@ -370,7 +433,8 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "前端實作",
+      "原型與互動"
     ],
     "repo_pushed_at": "2026-04-07",
     "skill_file_last_modified_at": "2026-04-07",
@@ -381,7 +445,12 @@
     "confidence": "medium",
     "license": "MIT (Rasmus Gehrke)",
     "full_content_analyzed": true,
-    "notes": "重大發現：tools/.sf-symbol-cli 是一個已編譯的 Mach-O 執行檔，會被 Python wrapper 透過 subprocess 直接執行，且沒有強制驗證與原始碼一致，屬需人工確認的可疑指令模式（非證實惡意）。另外需要 macOS + Xcode + Figma MCP，一般 Claude Code CLI 環境可行度受限。"
+    "notes": "重大發現：tools/.sf-symbol-cli 是一個已編譯的 Mach-O 執行檔，會被 Python wrapper 透過 subprocess 直接執行，且沒有強制驗證與原始碼一致，屬需人工確認的可疑指令模式（非證實惡意）。另外需要 macOS + Xcode + Figma MCP，一般 Claude Code CLI 環境可行度受限。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=2（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "29483f6259ab",
@@ -398,7 +467,8 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "UI 設計",
+      "前端實作"
     ],
     "repo_pushed_at": "2026-02-28",
     "skill_file_last_modified_at": "2026-02-28",
@@ -409,7 +479,12 @@
     "confidence": "medium",
     "license": "MIT (UI Design Brain Contributors)",
     "full_content_analyzed": true,
-    "notes": "886 星／74 fork 為本批次最高，60+ 元件知識庫組織良好；trust/feasibility 因時間限制本輪未逐項核算，暫列待評估，非因證據不足而標未知。 | Trust: license明確(20)+來源可追溯(15,真實GitHub帳號非匿名鏡像)+維護狀態0(最近推送2026-02-27，距今約205天，超過180天門檻)+內容行為一致(25,純文件參考型skill,無腳本)+無可疑指令(20,掃描乾淨)=80。Feasibility: 格式相容(25)+工具可用(30,僅需Read)+無外部依賴(25)+設定成本低(18,README以Cursor(.cursor/skills)為主要安裝目標,對Claude Code需手動放置,輕微文件落差)=98。此為原先因時間因素標記為\"待評估\"的欄位,現已補齊為實際評分結果,非「證據不足」。"
+    "notes": "886 星／74 fork 為本批次最高，60+ 元件知識庫組織良好；trust/feasibility 因時間限制本輪未逐項核算，暫列待評估，非因證據不足而標未知。 | Trust: license明確(20)+來源可追溯(15,真實GitHub帳號非匿名鏡像)+維護狀態0(最近推送2026-02-27，距今約205天，超過180天門檻)+內容行為一致(25,純文件參考型skill,無腳本)+無可疑指令(20,掃描乾淨)=80。Feasibility: 格式相容(25)+工具可用(30,僅需Read)+無外部依賴(25)+設定成本低(18,README以Cursor(.cursor/skills)為主要安裝目標,對Claude Code需手動放置,輕微文件落差)=98。此為原先因時間因素標記為\"待評估\"的欄位,現已補齊為實際評分結果,非「證據不足」。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=886（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "44dd2a37f2cb",
@@ -426,7 +501,7 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "設計系統"
     ],
     "repo_pushed_at": "2026-03-24",
     "skill_file_last_modified_at": "2026-03-24",
@@ -437,7 +512,12 @@
     "confidence": "high",
     "license": "MIT (Albert Zhang)",
     "full_content_analyzed": true,
-    "notes": "三檔案設計系統產生器，模板極其詳盡；trust/feasibility 本輪未逐項核算，暫列待評估。 | Trust: license明確(20)+來源可追溯(15,具名作者Albert Zhang)+維護狀態20(最近推送2026-03-24,距今恰約180天,落在門檻邊界內採計)+內容行為一致(25,純文件生成型skill,產出3份md,無腳本)+無可疑指令(20,掃描乾淨,無package.json)=100。Feasibility: 格式相容(25)+工具可用(30,僅需Read/Write/WebFetch,皆為Claude Code標準工具)+無外部依賴(25)+設定成本低(20,無需憑證或額外設定)=100。此為原先標記為\"待評估\"的欄位,現已補齊為實際評分結果。"
+    "notes": "三檔案設計系統產生器，模板極其詳盡；trust/feasibility 本輪未逐項核算，暫列待評估。 | Trust: license明確(20)+來源可追溯(15,具名作者Albert Zhang)+維護狀態20(最近推送2026-03-24,距今恰約180天,落在門檻邊界內採計)+內容行為一致(25,純文件生成型skill,產出3份md,無腳本)+無可疑指令(20,掃描乾淨,無package.json)=100。Feasibility: 格式相容(25)+工具可用(30,僅需Read/Write/WebFetch,皆為Claude Code標準工具)+無外部依賴(25)+設定成本低(20,無需憑證或額外設定)=100。此為原先標記為\"待評估\"的欄位,現已補齊為實際評分結果。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=38（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "90c34c16344d",
@@ -446,7 +526,7 @@
     "skill_path": "SKILL.md",
     "analyzed_commit": "7bfa9ba3ea7c",
     "popularity_score": 75,
-    "stars": 605,
+    "stars": 606,
     "forks": 41,
     "notion_page_id": "3e105064-114a-8101-8dea-e6006fa5555c",
     "notion_page_url": "https://app.notion.com/p/3e105064114a81018deae6006fa5555c",
@@ -454,7 +534,8 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "前端實作",
+      "原型與互動"
     ],
     "repo_pushed_at": "2026-07-03",
     "skill_file_last_modified_at": "2026-06-23",
@@ -465,7 +546,12 @@
     "confidence": "high",
     "license": "MIT (Danila Poyarkov)",
     "full_content_analyzed": true,
-    "notes": "真正的大型軟體專案（289+ 原始碼檔、測試、linter、MCP server），非單純 Markdown Skill。`figma-use patch` 指令會修改使用者本機 Figma 應用程式以繞過其遠端除錯限制，有明確金鑰授權提示（keychain 同意），屬透明揭露的系統層行為，非隱藏；需另外安裝 figma-use CLI 與執行中的 Figma 桌面版。"
+    "notes": "真正的大型軟體專案（289+ 原始碼檔、測試、linter、MCP server），非單純 Markdown Skill。`figma-use patch` 指令會修改使用者本機 Figma 應用程式以繞過其遠端除錯限制，有明確金鑰授權提示（keychain 同意），屬透明揭露的系統層行為，非隱藏；需另外安裝 figma-use CLI 與執行中的 Figma 桌面版。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=606（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "b4616b71eb63",
@@ -482,7 +568,9 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "UI 設計",
+      "無障礙",
+      "行動介面"
     ],
     "repo_pushed_at": "2026-06-10",
     "skill_file_last_modified_at": "2026-06-10",
@@ -493,7 +581,12 @@
     "confidence": "medium",
     "license": "無授權宣告",
     "full_content_analyzed": true,
-    "notes": "156 個蒸餾檔案涵蓋全平台 HIG，且有完整的自我稽核紀錄（sources/.../verification/ 內多份稽核報告），內容品質與工程嚴謹度本批次最高；唯一扣分是完全沒有授權宣告。"
+    "notes": "156 個蒸餾檔案涵蓋全平台 HIG，且有完整的自我稽核紀錄（sources/.../verification/ 內多份稽核報告），內容品質與工程嚴謹度本批次最高；唯一扣分是完全沒有授權宣告。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=329（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "cc99639aed67",
@@ -510,7 +603,8 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "UI 設計",
+      "前端實作"
     ],
     "repo_pushed_at": "2026-03-10",
     "skill_file_last_modified_at": "2026-03-10",
@@ -521,7 +615,12 @@
     "confidence": "medium",
     "license": "MIT (TheGreatGildo)",
     "full_content_analyzed": true,
-    "notes": "SKILL.md 內部文件不一致：文中提到『見 SKILL-v1.md』，實際舊版檔案卻在 v1-old/SKILL.md（路徑對不上）。Live Demo 連結為臨時性網域，穩定性存疑。"
+    "notes": "SKILL.md 內部文件不一致：文中提到『見 SKILL-v1.md』，實際舊版檔案卻在 v1-old/SKILL.md（路徑對不上）。Live Demo 連結為臨時性網域，穩定性存疑。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=222（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "d0fc7135e441",
@@ -538,7 +637,7 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "原型與互動"
     ],
     "repo_pushed_at": "2026-05-22",
     "skill_file_last_modified_at": "2025-10-26",
@@ -549,7 +648,12 @@
     "confidence": "medium",
     "license": "Apache-2.0（repo 與該 Skill frontmatter 皆聲明）",
     "full_content_analyzed": true,
-    "notes": "此 Skill 只是母 repo（60+ 個跨領域 Skill 的『LLM 產生 Skill』工具集）中的一個子項目，repo 層級 6 星不能代表此 Skill 本身熱門度（已於前次列為弱證據關係）。SKILL.md 內的 Pre-Checks 步驟寫死了一個已過期的『目前時間』(2025-10-26)，屬模板產生留下的瑕疵，不影響核心設計指引但降低可信度。"
+    "notes": "此 Skill 只是母 repo（60+ 個跨領域 Skill 的『LLM 產生 Skill』工具集）中的一個子項目，repo 層級 6 星不能代表此 Skill 本身熱門度（已於前次列為弱證據關係）。SKILL.md 內的 Pre-Checks 步驟寫死了一個已過期的『目前時間』(2025-10-26)，屬模板產生留下的瑕疵，不影響核心設計指引但降低可信度。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=6（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "d1803efc3ad5",
@@ -566,7 +670,7 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "原型與互動"
     ],
     "repo_pushed_at": "2026-03-07",
     "skill_file_last_modified_at": "2026-03-07",
@@ -577,7 +681,12 @@
     "confidence": "high",
     "license": "MIT (Oliver Kershaw)",
     "full_content_analyzed": true,
-    "notes": "明確界定適用/不適用情境（低擬真審查用，非正式視覺設計），並提供真實的本地驗證腳本 validate_wireframe_spec.js；0 star 但工程品質良好。"
+    "notes": "明確界定適用/不適用情境（低擬真審查用，非正式視覺設計），並提供真實的本地驗證腳本 validate_wireframe_spec.js；0 star 但工程品質良好。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=0（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
   },
   {
     "skill_id": "3ffa6a196cea",
@@ -594,7 +703,9 @@
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
-      "UI/UX"
+      "行動介面",
+      "無障礙",
+      "設計稽核"
     ],
     "repo_pushed_at": "2026-07-01",
     "skill_file_last_modified_at": "2026-07-01",
@@ -605,6 +716,186 @@
     "confidence": "high",
     "license": "Apache-2.0（含 NOTICE 檔）",
     "full_content_analyzed": true,
-    "notes": "本批次工程品質最高者：quality-checks/validators/ 內含真正的 Python 靜態檢查器（對比度、觸控目標、RTL、動態字級等）並附自己的 pytest 測試套件與正反例 fixture，另有 eval/ 比較有無此 Skill 的產出差異。星數僅 1（repo 非常新），熱門度低不代表品質低。"
+    "notes": "本批次工程品質最高者：quality-checks/validators/ 內含真正的 Python 靜態檢查器（對比度、觸控目標、RTL、動態字級等）並附自己的 pytest 測試套件與正反例 fixture，另有 eval/ 比較有無此 Skill 的產出差異。星數僅 1（repo 非常新），熱門度低不代表品質低。",
+    "archived": true,
+    "archive_reason": "2026-09-20 重新查核 GitHub 實際 stars=1（真實整數，非熱門度分數或四捨五入值），低於新門檻 1,000；此筆為 Agent 首批自行選入，非使用者明確指定，不自動列為例外。",
+    "archived_at": "2026-09-20",
+    "metrics_captured_at": "2026-09-20",
+    "user_specified_exception": false
+  },
+  {
+    "skill_id": "f3dcff2a5876",
+    "name": "design-doctrine",
+    "repo": "plugin87/ux-ui-agent-skills",
+    "skill_path": ".claude/skills/design-doctrine/SKILL.md",
+    "analyzed_commit": "f2e2f7fcc5cb",
+    "popularity_score": 90,
+    "stars": 1428,
+    "forks": 146,
+    "recommendation_status": "可推薦",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI 設計",
+      "設計系統",
+      "無障礙",
+      "設計稽核"
+    ],
+    "repo_pushed_at": "2026-09-16",
+    "skill_file_last_modified_at": "2026-09-15",
+    "skill_file_last_commit": "f239f2400018",
+    "utility_score": 86,
+    "trustworthiness_score": 98,
+    "feasibility_score": 85,
+    "confidence": "medium",
+    "license": "MIT (Thientan Soparat)",
+    "full_content_analyzed": true,
+    "star_check_method": "mcp__github__search_repositories 實際整數 stargazers_count，2026-09-20 擷取",
+    "multi_skill_repo_note": "此 repo 含 19 個 SKILL.md（.claude/skills/ 下的完整 UX/UI 工具包）。design-doctrine 為明確標示「Load this FIRST」的房規/驗證協定入口，作為本次收錄的旗艦代表；其餘 18 個子 Skill（design-review、a11y-audit、design-tokens、token-build、figma-integration、image-to-code、design-component、design-code、prototype、redesign、governance、migrate-design-system、data-dashboard、brandkit、apply-aesthetic、performance、ux-writing、design-qa）暫不獨立建檔，列入 backlog。",
+    "notes": "verification-gate 風格的設計房規：反對「宣稱數字未經驗證」，要求逐步跑 node 腳本驗證 contrast/states/responsive 才能回報完成。需要 Node.js 執行環境跑驗證腳本，屬額外設定成本。",
+    "archived": false,
+    "user_specified_exception": false,
+    "metrics_captured_at": "2026-09-20",
+    "notion_page_id": "3e105064-114a-819b-8740-e8841bad626e",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a819b8740e8841bad626e"
+  },
+  {
+    "skill_id": "765e99d12f65",
+    "name": "scroll-craft",
+    "repo": "nateherkai/scroll-craft",
+    "skill_path": "plugins/nateherk-design/skills/scroll-craft/SKILL.md",
+    "analyzed_commit": "0b816225945e",
+    "popularity_score": 90,
+    "stars": 2610,
+    "forks": 380,
+    "recommendation_status": "可推薦",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI 設計",
+      "前端實作",
+      "原型與互動"
+    ],
+    "repo_pushed_at": "2026-09-04",
+    "skill_file_last_modified_at": "2026-09-04",
+    "skill_file_last_commit": "d25ac1b04583",
+    "utility_score": 87,
+    "trustworthiness_score": 98,
+    "feasibility_score": 95,
+    "confidence": "high",
+    "license": "MIT (Nate Herk)",
+    "full_content_analyzed": true,
+    "star_check_method": "mcp__github__search_repositories 實際整數 stargazers_count，2026-09-20 擷取",
+    "notes": "範圍明確且窄：只做「捲動驅動的登陸頁」，非通用 UI/UX。可選整合 kie.ai 產生素材（scripts/kie.mjs，base64 上傳至官方 API，行為與 SKILL.md 揭露一致，非隱藏），也支援使用者自帶素材。工具需求皆為 Claude Code 原生工具（Bash/Read/Write/Edit/Glob/Grep/AskUserQuestion）。",
+    "archived": false,
+    "user_specified_exception": false,
+    "metrics_captured_at": "2026-09-20",
+    "notion_page_id": "3e105064-114a-81ef-b69a-e18c64126012",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a81efb69ae18c64126012"
+  },
+  {
+    "skill_id": "a25b5cf27e22",
+    "name": "baoyu-design",
+    "repo": "JimLiu/baoyu-design",
+    "skill_path": "skills/baoyu-design/SKILL.md",
+    "analyzed_commit": "026d4ea012bd",
+    "popularity_score": 90,
+    "stars": 4100,
+    "forks": 284,
+    "recommendation_status": "可推薦",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI 設計",
+      "原型與互動",
+      "設計系統"
+    ],
+    "repo_pushed_at": "2026-07-29",
+    "skill_file_last_modified_at": "2026-07-25",
+    "skill_file_last_commit": "b99a5d985602",
+    "utility_score": 92,
+    "trustworthiness_score": 97,
+    "feasibility_score": 91,
+    "confidence": "high",
+    "license": "MIT (Jim Liu 宝玉)",
+    "full_content_analyzed": true,
+    "star_check_method": "mcp__github__search_repositories 實際整數 stargazers_count，2026-09-20 擷取",
+    "multi_skill_repo_note": "repo 內另有 .claude/skills/release-skills/SKILL.md，屬維護者發版用的內部 meta skill，非使用者導向的 UI/UX 功能，不建檔。",
+    "notes": "涵蓋範圍極廣：UI mockup、互動原型、wireframe、landing page、dashboard、簡報（可匯出 PPTX）、設計系統匯入/建立（含從 Figma .fig 離線解析、從 GitHub repo 匯入）。Harness-agnostic（Claude Code／Cursor／Codex）。內含 pptxgenjs 等第三方 vendor 函式庫（標準打包依賴，非隱藏行為）。",
+    "archived": false,
+    "user_specified_exception": false,
+    "metrics_captured_at": "2026-09-20",
+    "notion_page_id": "3e105064-114a-8128-a446-cfccf2579ae1",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a8128a446cfccf2579ae1"
+  },
+  {
+    "skill_id": "79ba521bfd02",
+    "name": "design-taste-frontend",
+    "repo": "Leonxlnx/taste-skill",
+    "skill_path": "skills/taste-skill/SKILL.md",
+    "analyzed_commit": "5217fb45be2c",
+    "popularity_score": 100,
+    "stars": 88755,
+    "forks": 6041,
+    "recommendation_status": "可推薦",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI 設計",
+      "前端實作",
+      "設計稽核"
+    ],
+    "repo_pushed_at": "2026-09-20",
+    "skill_file_last_modified_at": "2026-05-26",
+    "skill_file_last_commit": "3c7017d636c3",
+    "utility_score": 92,
+    "trustworthiness_score": 97,
+    "feasibility_score": 99,
+    "confidence": "high",
+    "license": "MIT (Leonxlnx)",
+    "full_content_analyzed": true,
+    "star_check_method": "mcp__github__search_repositories 實際整數 stargazers_count，2026-09-20 擷取（本批次最高星數）",
+    "multi_skill_repo_note": "repo 名稱為 taste-skill，但實際含 13 個 SKILL.md 子技能（brandkit、redesign-skill、imagegen-frontend-web/mobile、soft-skill、brutalist-skill、taste-skill、taste-skill-v1、stitch-skill、output-skill、image-to-code-skill、gpt-tasteskill、minimalist-skill）。本次收錄以 skills/taste-skill/SKILL.md（frontmatter name: design-taste-frontend）為旗艦代表，與 repo 行銷名稱一致；其餘 12 個子 Skill 暫不獨立建檔，列入 backlog。skills/taste-skill-v1/SKILL.md 疑似為本筆的舊版本，尚待比對確認是否為單純歷史保留。",
+    "notes": "反 AI-slop 前端設計指引，明確限定適用範圍（landing page／portfolio／redesign，非 dashboard／資料表／多步驟產品 UI），要求先做「Design Read」一句話宣告再動手，並列出禁用的 LLM 預設樣式清單（AI 紫色漸層、置中英雄圖、三張等寬卡片等）。88,755 星為本批次（含舊 20 筆）目前最高。",
+    "archived": false,
+    "user_specified_exception": false,
+    "metrics_captured_at": "2026-09-20",
+    "notion_page_id": "3e105064-114a-812b-8d82-ea14f90a2027",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a812b8d82ea14f90a2027"
+  },
+  {
+    "skill_id": "808e11d6de91",
+    "name": "material-3",
+    "repo": "hamen/material-3-skill",
+    "skill_path": "skills/material-3/SKILL.md",
+    "analyzed_commit": "14385f2bf380",
+    "popularity_score": 90,
+    "stars": 1396,
+    "forks": 71,
+    "recommendation_status": "可推薦",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI 設計",
+      "設計系統",
+      "行動介面",
+      "無障礙"
+    ],
+    "repo_pushed_at": "2026-07-16",
+    "skill_file_last_modified_at": "2026-05-20",
+    "skill_file_last_commit": "1857f9e0a014",
+    "utility_score": 91,
+    "trustworthiness_score": 97,
+    "feasibility_score": 99,
+    "confidence": "high",
+    "license": "MIT (CWTI Ltd)",
+    "full_content_analyzed": true,
+    "star_check_method": "mcp__github__search_repositories 實際整數 stargazers_count，2026-09-20 擷取",
+    "notes": "Google Material Design 3 完整實作指南：Jetpack Compose（主要）、Flutter、有限度支援 web。涵蓋 30+ 元件、設計 token、佈局、theming、M3 Expressive、無障礙與 MD3 合規稽核。內含平台決策樹與跟 frontend-design 等其他 Skill 的關係說明（明確聲明 token 優先權）。",
+    "archived": false,
+    "user_specified_exception": false,
+    "metrics_captured_at": "2026-09-20",
+    "notion_page_id": "3e105064-114a-81f5-8901-f07cf9764394",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a81f58901f07cf9764394"
   }
 ]

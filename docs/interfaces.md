@@ -50,6 +50,10 @@ repo 的 `updated_at` 只要 metadata 異動就會更新，`pushed_at` 才是真
 替代方案、資料新鮮度（`last_success_check` 距今天數）。無合適項目時 `status: "ok"` 但清單為空，
 並說明原因；關鍵資訊不足時 `status: "needs_input"` 並列出 `pending` 問題，交由主流程詢問使用者。
 
+**封存項目排除（2026-09-20 起）**：`Archived: true` 的記錄（低於收錄門檻或其他移出條件，
+且無使用者例外）預設不列入推薦清單。若使用者查詢的任務只有封存項目符合，需明確告知「該
+Skill 已封存及原因」，不得靜默略過或當成一般無結果回報。
+
 ## compare_skills
 
 輸入：`{ "skill_ids": ["a","b",...], "context": "..." }`（至少 2 個）

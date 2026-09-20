@@ -41,14 +41,28 @@ Notion 資料庫（人類可讀目錄）：https://app.notion.com/p/2ff83cca1acb
 （`memory/state.json` 的 `notion_database_url` / `notion_data_source_url` 為同一份記錄）。
 本 repo 只保存可還原記憶摘要，不重複保存完整分析內容。
 
-## 目前狀態（2026-09-20）
+## 目前狀態（2026-09-20，第四輪：TAG 分類 + 1,000 星收錄門檻）
 
-- 已完成：Notion 資料庫與「全部／可推薦／待處理」三個檢視、UI/UX 首批 20 個 Skill 收錄
-  （來源、commit、熱門度分數皆可追溯）、初步關係分析（重複／部分重疊／互補／無明顯關聯／
-  待確認，共 9 組）、bootstrap／backup 腳本並已端對端驗證。
-- 已知限制：本工作階段的 GitHub 內容讀取權限僅涵蓋明確 `add_repo` 的 repo，因此這批
-  20 個 Skill 的實用度／可信度／可行度目前皆為 `unknown`（僅熱門度為真實評分），需要
-  下一輪以 `get_skill` 下載完整套件後補齊，詳見 `memory/state.json` 的 `backlog`。
+- **收錄規則變更**：改用 GitHub 實際 stars ≥ 1,000 的收錄門檻（取代先前「不設門檻」），
+  詳見 `memory/state.json` 的 `confirmed_settings.star_threshold`。首批 20 個 Skill
+  （皆為 Agent 首批自行選入、非使用者例外）重新查核後 stars 介於 0～886，全數低於門檻，
+  已用「封存」（`Archived: true`，可恢復、非刪除）機制移出有效清單，原有完整四項評估
+  內容全數保留在 Notion 頁面與 `memory/skill-index.json` 中。
+- 廣泛搜尋（20+ 組關鍵字查詢）後找到 5 個符合新門檻的 Skill 並完成完整收錄：
+  `design-doctrine`（plugin87/ux-ui-agent-skills, 1428★）、`scroll-craft`
+  （nateherkai/scroll-craft, 2610★）、`baoyu-design`（JimLiu/baoyu-design, 4100★）、
+  `design-taste-frontend`（Leonxlnx/taste-skill, 88755★）、`material-3`
+  （hamen/material-3-skill, 1396★）。未達 20 個目標，已如實回報短缺與已排除的候選
+  （見 `memory/state.json` 的 `scan_progress.star_threshold_batch_20260920`），未降低
+  門檻或擴大類型湊數。
+- Notion 資料庫新增：`Tags` 依完整內容重新標記為 8 類用途標籤（UI 設計／UX 研究／設計
+  系統／無障礙／設計稽核／前端實作／行動介面／原型與互動）、「依 TAG 分類」與「已移出」
+  兩個新檢視、`Archived`／`Archive Reason`／`Archived At`／`User Specified Exception`／
+  `Exception Reason`／`Exception Source` 六個新欄位，詳見 `docs/notion-schema.md`。
+- 已完成（歷史累積）：四輪完整內容分析（20 個舊項目 + 5 個新項目皆為 `git clone` 完整讀取，
+  非僅 frontmatter）、`scoring-rules@1.1.0`（含授權一致性強制規則）、`refresh_skills`
+  真實可執行實作（`scripts/refresh_skills.py`，含合併判斷）、關係分析共 16 組、
+  bootstrap／backup 腳本端對端驗證。
 - 「開啟 Agent Office 時自動觸發維護」尚未整合：`amber-ou/agent-office` 是有自己執行模型
   （Task → 指派 Agent → Run → Review）的控制平面應用程式，其 ADR 明確排除自動派工／
   背景常駐 Agent，目前沒有可掛載的「開啟」事件；已與使用者確認暫不建置替代方案，

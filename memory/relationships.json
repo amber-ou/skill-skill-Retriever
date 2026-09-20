@@ -1,5 +1,42 @@
 [
   {
+    "pair": ["79ba521bfd02", "a25b5cf27e22"],
+    "names": ["design-taste-frontend (Leonxlnx)", "baoyu-design (JimLiu)"],
+    "relation": "部分重疊",
+    "rationale": "兩者皆已完整讀取 SKILL.md 全文。design-taste-frontend 專注於「反 AI-slop 的美學方向判斷」，範圍明確限定在 landing page／portfolio／redesign，核心產出是一句話的『Design Read』宣告加上遵循禁用預設樣式清單；baoyu-design 範圍廣得多，涵蓋 mockup／原型／wireframe／簡報／履歷／設計系統匯入等十餘種產出類型，核心產出是實際的 HTML 檔案。兩者在『避免 AI 樣板感』這個目標上高度重疊，但 baoyu-design 的廣度遠超 design-taste-frontend 的美學判斷職責，屬部分重疊而非重複。",
+    "evidence": "兩者皆為完整 SKILL.md 內容（git clone 全讀）",
+    "confidence": "medium",
+    "checked_at": "2026-09-20（1,000 星門檻批次）"
+  },
+  {
+    "pair": ["f3dcff2a5876", "79ba521bfd02"],
+    "names": ["design-doctrine (plugin87)", "design-taste-frontend (Leonxlnx)"],
+    "relation": "部分重疊",
+    "rationale": "兩者皆已完整讀取 SKILL.md 全文。design-doctrine 是可執行、可驗證的房規（跑 node 腳本量測對比度/狀態/響應式，未跑過不得宣稱），偏工程正確性層面；design-taste-frontend 是美學方向判斷（讀懂需求、宣告 Design Read、避開 LLM 預設樣式），偏品味/創意層面。兩者常會在同一個前端專案中互補使用（先定美學方向，再用房規驗證落地正確性），但職責分工清楚不重複。",
+    "evidence": "兩者皆為完整 SKILL.md 內容（git clone 全讀）",
+    "confidence": "medium",
+    "checked_at": "2026-09-20（1,000 星門檻批次）"
+  },
+  {
+    "pair": ["765e99d12f65", "a25b5cf27e22"],
+    "names": ["scroll-craft (nateherkai)", "baoyu-design (JimLiu)"],
+    "relation": "部分重疊",
+    "rationale": "兩者皆已完整讀取 SKILL.md 全文。scroll-craft 是高度專精、範圍窄的技能（僅做捲動驅動登陸頁，SKILL.md 明確聲明『這不是什麼』排除其他用法）；baoyu-design 的產出類型包含一般 landing page，是其廣泛能力的其中一項，但沒有 scroll-craft 對捲動敘事/情緒曲線/招牌動作的專門設計深度。同一個「做登陸頁」需求下兩者有重疊，但 scroll-craft 在其專精領域內明顯更深入。",
+    "evidence": "兩者皆為完整 SKILL.md 內容（git clone 全讀）",
+    "confidence": "low",
+    "checked_at": "2026-09-20（1,000 星門檻批次）",
+    "note": "未發現任何一方直接引用或提及對方，重疊判斷純粹來自功能範圍比對，非來源鏈證據"
+  },
+  {
+    "pair": ["808e11d6de91", "f3dcff2a5876"],
+    "names": ["material-3 (hamen)", "design-doctrine (plugin87)"],
+    "relation": "無明顯關聯",
+    "rationale": "material-3 是特定於 Google Material Design 3 規範的平台級實作指南（Jetpack Compose/Flutter/web token 與元件），design-doctrine 是與任何設計系統無關的通用驗證房規。兩者可在同一專案並用（material-3 提供規範內容，design-doctrine 驗證落地正確性），但屬各自獨立的職責，非同一任務的候選比較對象。",
+    "evidence": "兩者皆為完整 SKILL.md 內容（git clone 全讀）",
+    "confidence": "medium",
+    "checked_at": "2026-09-20（1,000 星門檻批次）"
+  },
+  {
     "pair": ["140f7ab4ac9d", "51df00b6a70e"],
     "names": ["ux-designer (szilu)", "uiux (DietCokewithSugar)"],
     "relation": "部分重疊",
