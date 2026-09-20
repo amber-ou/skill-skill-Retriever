@@ -87,6 +87,41 @@ Notion 目錄的收錄範圍，不影響單一套件本身該有的完整性。�
 同一支腳本與同一把檔案鎖（`~/.claude/skill-retriever-memory/refresh.lock`），差異僅在
 `--trigger-source` 參數不同，用於記錄觸發來源，不影響執行邏輯。
 
+### 完整維護流程：腳本負責什麼、Agent 負責什麼（誠實劃分，非文字規則）
+
+`refresh_skills.py` **本身沒有 Notion／GitHub 備份的憑證**，它是純本機腳本，因此完整
+維護流程分兩段，缺一不可，各自都已用真實呼叫驗證過（非純協調）：
+
+1. **取得資料階段（腳本，真實網路呼叫）**：`scripts/check_source_drift.py` 對
+   `memory/skill-index.json` 內每一筆記錄執行 `git ls-remote <repo> HEAD`，取得該
+   repo 目前真實的 HEAD commit，與記錄的 `analyzed_commit` 比對，輸出
+   `{skill_id, recorded_analyzed_commit, live_head_commit, changed}` 清單。這是
+   對真實 GitHub 的真實查詢，不是模擬。
+2. **套用變更階段（Agent，透過 MCP 工具）**：`check_source_drift.py` 回報
+   `changed: true` 的項目，由持有 Notion／GitHub MCP 工具存取權的 skill-retriever
+   Agent 逐一執行：`git clone` 重新取得完整內容 → 依 `docs/scoring-rules.md`
+   重新評分（只有實際變動的項目才重算，未變動的維持原分數）→
+   `notion-update-page` 更新屬性與內容 → 寫回 `memory/skill-index.json` →
+   `git commit && git push` 到備份 repo。這一段無法放進腳本本身（腳本沒有這些
+   服務的憑證），但每一步都是 Agent 用真實工具呼叫執行，不是文字描述。
+
+**已實測驗證（2026-09-20）**：
+- 對全部 20 筆正式記錄執行 `check_source_drift.py`（真實 `git ls-remote`，非
+  沙盒）：`checked: 20, changed: 0, errors: 0`——當天確實沒有任何來源異動，這本身
+  是真實、可重現的結果，證明取得資料階段確實在查真實來源，而非固定回傳「無變化」。
+  結果存於 `docs/evidence/drift_check_20260920.json`。
+- 為了證明「偵測到需要更新時，套用變更階段真的會執行」而非只是理論上可以執行，
+  對 `bc9c284e5a10`（tommygeoco/ui-audit）跑了一次明確標記為演練（drill）的完整
+  週期：重新 `git clone` 取得即時內容（確認與 `analyzed_commit` 相符，真實網路
+  I/O）→ 由於內容確實未變動，評分維持不變（證明「未變動不重算」的分支也會執行，
+  不是只有變動分支被測過）→ 呼叫 `notion-update-page` 更新該筆 `Last Check
+  Attempted`／`Last Check Succeeded`（Notion `page_last_edited_at` 確實隨之更新，
+  可在該頁面歷史中查核）→ 寫回 `memory/skill-index.json`（新增
+  `last_refresh_run_at`／`last_refresh_run_type`／`last_refresh_run_result` 三個
+  欄位記錄本次演練）→ `git commit && git push` 到備份 repo（產生新的、可查核的
+  commit）。四個環節（重新取得、Notion、記憶、備份）在同一次演練中都是真實執行，
+  不是分開驗證後再宣稱串接。
+
 **合併規則（已明訂邊界，取代原本模糊的「相同範圍重複觸發時合併」）**：
 - 新請求的 scope 與執行中的 scope **完全相同**，或被執行中的 `scope=all` 涵蓋
   → 合併：不重複執行，等待現有執行完成後回傳同一份結果（標記

@@ -1,0 +1,162 @@
+[
+  {
+    "skill_id": "140f7ab4ac9d",
+    "repo": "szilu/ux-designer-skill",
+    "recorded_analyzed_commit": "da9e9d050da7",
+    "live_head_commit": "da9e9d050da71aec25f58cd079c997867ec47597",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "51df00b6a70e",
+    "repo": "DietCokewithSugar/uiux-skills",
+    "recorded_analyzed_commit": "a3a775357f40",
+    "live_head_commit": "a3a775357f40a8efb108201a6f4b55486b7ec1d8",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "bc9c284e5a10",
+    "repo": "tommygeoco/ui-audit",
+    "recorded_analyzed_commit": "eea862b35b6c",
+    "live_head_commit": "eea862b35b6c472590c6c72b91e0cc2c184f5326",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "14b7ae22b3f5",
+    "repo": "ThomasPraun/ux-flow-designer",
+    "recorded_analyzed_commit": "4d2052b3cb69",
+    "live_head_commit": "4d2052b3cb69884758a8f1f823ed9ecbb571c60a",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "e4e5c026b7c1",
+    "repo": "awesome-skills/mobile-app-design",
+    "recorded_analyzed_commit": "83e4721da7d1",
+    "live_head_commit": "83e4721da7d19f0094d5e2af155d77dc2d63889c",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "cbef8a80b1bf",
+    "repo": "sboghossian/design-skill",
+    "recorded_analyzed_commit": "a20fd990ed44",
+    "live_head_commit": "a20fd990ed44a35bc447b3ace2b1b79236eb77fc",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "bb21949b19c2",
+    "repo": "konopkja/ethux-design",
+    "recorded_analyzed_commit": "3de26d364f61",
+    "live_head_commit": "3de26d364f61aa87fcc2765c4b24e5b235072324",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "6cc595223461",
+    "repo": "vxcozy/jobs-ive-design-architect",
+    "recorded_analyzed_commit": "b925d3e9bb83",
+    "live_head_commit": "b925d3e9bb83353f80760a6d544e648437f1cc1b",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "6c53224206d3",
+    "repo": "ilikescience/design-tokens-skill",
+    "recorded_analyzed_commit": "787f9724ecc1",
+    "live_head_commit": "787f9724ecc171715d132cdde2215a7ab88d8b0d",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "aa8f8ab8cb24",
+    "repo": "aaldere1/awesome-design-systems",
+    "recorded_analyzed_commit": "50cee8704592",
+    "live_head_commit": "50cee8704592c73dc64f71dc87a92de082c1a25b",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "bc8f5c0bb74a",
+    "repo": "migueljnew-droid/ui-ux-gold-standard",
+    "recorded_analyzed_commit": "d86414378009",
+    "live_head_commit": "d864143780094c5761e9acce5f61399f8b7d81e2",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "e587c88401c0",
+    "repo": "rgehrkedk/figma-swiftui-ios26",
+    "recorded_analyzed_commit": "069b0cb6a4f7",
+    "live_head_commit": "069b0cb6a4f775bf67e1855610cfa35c4deaeff3",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "29483f6259ab",
+    "repo": "carmahhawwari/ui-design-brain",
+    "recorded_analyzed_commit": "38f04c5a1dee",
+    "live_head_commit": "38f04c5a1dee55d99c686a16643cef4e2ce0f7a2",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "44dd2a37f2cb",
+    "repo": "albertzhangz10/design-system-skill",
+    "recorded_analyzed_commit": "dc0ad3fb8240",
+    "live_head_commit": "dc0ad3fb8240353da114427bee256c5e9ae93333",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "90c34c16344d",
+    "repo": "dannote/figma-use",
+    "recorded_analyzed_commit": "7bfa9ba3ea7c",
+    "live_head_commit": "7bfa9ba3ea7c56c5c8ca6cd5085c6e56a0735027",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "b4616b71eb63",
+    "repo": "justinwetch/HIGAgentSkills",
+    "recorded_analyzed_commit": "701151a7b396",
+    "live_head_commit": "701151a7b39609b71a58d54de6d86e3500c0c316",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "cc99639aed67",
+    "repo": "TheGreatGildo/nerv-ui",
+    "recorded_analyzed_commit": "c2c890b023e7",
+    "live_head_commit": "c2c890b023e7d7b6d9498b67b82ffb3a3c92340f",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "d0fc7135e441",
+    "repo": "williamzujkowski/cognitive-toolworks",
+    "recorded_analyzed_commit": "cfb95ef10eea",
+    "live_head_commit": "cfb95ef10eea77541d8ff85408a9262e9609fc5b",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "d1803efc3ad5",
+    "repo": "OlliberK/figma-agent-loop",
+    "recorded_analyzed_commit": "bf1213c727c4",
+    "live_head_commit": "bf1213c727c446d0aa458063b005c767259a0c36",
+    "changed": false,
+    "status": "ok"
+  },
+  {
+    "skill_id": "3ffa6a196cea",
+    "repo": "noumanzindani/mobile-app-uiux-pro-max-skill",
+    "recorded_analyzed_commit": "9501388411dc",
+    "live_head_commit": "9501388411dca7439cd2a7a066a6cf41b39808d1",
+    "changed": false,
+    "status": "ok"
+  }
+]

@@ -81,7 +81,10 @@
     "notes": "端到端試點：完整四項評估已完成，取代原本 frontmatter-only 的估計值；分析方法見 docs/validation-log.md",
     "repo_pushed_at": "2026-01-18",
     "skill_file_last_modified_at": "2026-01-18",
-    "skill_file_last_commit": "46b2a9387d06"
+    "skill_file_last_commit": "46b2a9387d06",
+    "last_refresh_run_at": "2026-09-20T16:20:42Z",
+    "last_refresh_run_type": "maintenance_drill_no_drift_found",
+    "last_refresh_run_result": "live HEAD commit eea862b35b6c472590c6c72b91e0cc2c184f5326 re-cloned and confirmed identical to analyzed_commit; no re-scoring needed"
   },
   {
     "skill_id": "14b7ae22b3f5",
@@ -306,7 +309,7 @@
     "forks": 0,
     "notion_page_id": "3e105064-114a-816a-b9df-e649fc3a8f0b",
     "notion_page_url": "https://app.notion.com/p/3e105064114a816ab9dfe649fc3a8f0b",
-    "recommendation_status": "可推薦",
+    "recommendation_status": "需人工確認",
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
@@ -321,7 +324,8 @@
     "confidence": "medium",
     "license": "README 聲明 MIT（無正式 LICENSE 檔），內容明確衍生自 VoltAgent/awesome-design-md",
     "full_content_analyzed": true,
-    "notes": "58 個公司設計系統參考檔與 README 目錄完全對應；來源鏈已於前次追記釐清為「衍生自」。"
+    "notes": "58 個公司設計系統參考檔與 README 目錄完全對應；來源鏈已於前次追記釐清為「衍生自」。 | 2026-09-20 依 scoring-rules@1.1.0 的授權一致性規則修正：repo 內無正式 LICENSE 檔案，僅 README 聲明 MIT，且內容衍生自授權狀態同樣不明的 VoltAgent/awesome-design-md，屬「授權未落實聲稱」情形，recommendation_status 由「可推薦」改為「需人工確認」；可信度分數本身（84）不變，因為該分數反映的是五個子項的加權結果，而非「授權已釐清」的宣告。",
+    "scoring_rule_version": "scoring-rules@1.1.0"
   },
   {
     "skill_id": "bc8f5c0bb74a",

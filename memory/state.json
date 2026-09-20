@@ -17,7 +17,8 @@
     "retry_limit": 3,
     "maintenance_triggers": ["direct_user_call", "other_agent_refresh_skills_call"]
   },
-  "scoring_rules_version": "scoring-rules@1.0.0",
+  "scoring_rules_version": "scoring-rules@1.1.0",
+  "scoring_rules_1_1_0_change": "新增授權不明確一致性規則：無正式 LICENSE 檔或授權僅在次要位置聲稱未落實，recommendation_status 一律強制「需人工確認」，不論可信度分數多高。依此規則修正 aa8f8ab8cb24（原「可推薦」，改為「需人工確認」），其餘 19 筆逐一核對後皆已符合規則，無需變更。",
   "overall_status": "首批 20 個 Skill 全數完成四項評估與 Notion／備份同步；refresh_skills 與同時觸發合併已由文字規則改為實測通過的真實實作；Agent Office 開啟觸發仍為待整合",
   "overall_status_set_on": "2026-09-20",
   "content_access_method": {
