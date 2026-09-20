@@ -40,6 +40,14 @@
     "last_backup_pushed_at": null,
     "last_backup_commit": null
   },
+  "validation": {
+    "find_skills_cross_agent_test": {
+      "date": "2026-09-20",
+      "method": "independent general-purpose agent instance loaded agent/skill-retriever.md as its operating instructions (this session's Agent tool does not expose custom subagent_type dynamically) and executed a find_skills query against the live Notion database",
+      "task": "Flutter App 行動版 UI/UX 設計與稽核流程",
+      "result": "passed — returned 3 candidates all correctly marked 待評估 (not 可推薦), correctly cited relationships.json's duplicate flag between e4e5c026b7c1 and 3ffa6a196cea, and explicitly stated only popularity is scored while utility/trustworthiness/feasibility remain unknown"
+    }
+  },
   "backlog": [
     {
       "item": "對已收錄的 20 個 UI/UX Skill 執行 get_skill（完整套件下載），補齊實用度／可信度／可行度評分，取代目前的 unknown 狀態",
