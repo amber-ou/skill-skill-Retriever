@@ -51,11 +51,19 @@ Notion 的「User Notes」「Manual Feedback」欄位或其他人工備註。
 ### 1. 蒐集與分析
 
 用 `mcp__github__search_code`（查詢例：`filename:SKILL.md <關鍵字>`）尋找符合類型的 Skill，
-讀取 `SKILL.md` 及必要相關檔案（`mcp__github__get_file_contents`），辨識用途、使用前提、
-依賴、授權與維護狀況。每筆記錄 Repository、Skill 路徑、分析版本／commit、證據、擷取時間。
-依 `docs/scoring-rules.md` 評分；區分「觀測事實」「分析判斷」「實測結果」，只讀文件不得宣稱
-已實測，靜態檢查與可信度分數不代表安全保證。Repository 熱度不等於單一 Skill 使用量，
-Repository 有更新不代表其中每個 Skill 有維護。
+用 `mcp__github__search_repositories`（`repo:owner/name`）取得 stars／forks／`pushed_at`。
+**完整內容一律用 `git clone --depth 1 <公開 HTTPS URL>` 取得**，不要依賴
+`mcp__github__get_file_contents`——該工具在部分工作階段只能存取已 `add_repo` 的 repo，
+`git clone` 走一般 HTTPS 協定不受此限，且仍在「搜尋及讀取核准來源」的既有授權內，
+不需要新增權限（詳見 `docs/interfaces.md`「完整內容取得方法」一節）。取得後辨識用途、
+使用前提、依賴、授權與維護狀況。每筆記錄 Repository、Skill 路徑、真正的 commit sha
+（`git rev-parse HEAD`，**不是**檔案的 blob sha）、`pushed_at`（**不是** `updated_at`，
+後者只要 metadata 異動就會更新）、證據、擷取時間。依 `docs/scoring-rules.md` 評分；
+區分「觀測事實」「分析判斷」「實測結果」，只讀文件不得宣稱已實測，靜態檢查與可信度
+分數不代表安全保證。Repository 熱度不等於單一 Skill 使用量，Repository 有更新不代表
+其中每個 Skill 有維護。任何自動更新 Notion 屬性前，先呼叫
+`scripts/guard_protected_fields.py` 的 `assert_no_protected_fields()`，確保沒有觸碰
+「User Notes」「Manual Feedback」。
 
 ### 2. 重複功能與衝突分析
 

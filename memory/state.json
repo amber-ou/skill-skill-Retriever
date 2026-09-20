@@ -18,6 +18,14 @@
     "maintenance_triggers": ["direct_user_call", "other_agent_refresh_skills_call"]
   },
   "scoring_rules_version": "scoring-rules@1.0.0",
+  "overall_status": "基礎建置完成，部分驗收待完成",
+  "overall_status_set_on": "2026-09-20",
+  "content_access_method": {
+    "finding": "mcp__github__get_file_contents 等 GitHub MCP 內容工具僅能存取本工作階段已明確 add_repo 的 repo；此為該工具本身的授權範圍設計，不是使用者未授權讀取公開 GitHub",
+    "resolution": "改用 git clone --depth 1 <公開 HTTPS URL>，走一般 HTTPS 智慧協定，不受該工具的 Repository Scope 限制，完全落在既有『搜尋及讀取核准來源』授權內，未新增任何權限",
+    "new_permissions_needed": false,
+    "documented_in": "docs/interfaces.md 與 docs/validation-log.md"
+  },
   "agent_office": {
     "identified_as": "amber-ou/agent-office — a control-plane desktop app (Task -> assign Agent -> Run -> Review), not a CLI/CLAUDE.md hookable repo",
     "open_event_mechanism": "pending_integration",
@@ -30,9 +38,9 @@
     "ui_ux_initial_batch": {
       "target_count": 20,
       "collected_count": 20,
-      "status": "collected_popularity_only",
+      "status": "1_of_20_fully_analyzed",
       "completed_at": "2026-09-20",
-      "note": "20 筆已建立於 Notion 並記錄於 memory/skill-index.json；受限於本工作階段 GitHub 內容讀取權限只涵蓋已 add_repo 的兩個 repo，本輪僅能透過 mcp__github__search_code 的 text_matches 片段取得 SKILL.md frontmatter，未下載完整檔案。因此僅完成熱門度（popularity）評分，實用度／可信度／可行度四項中的其餘三項在 Notion 記錄中皆為 unknown，等待下一輪以 get_skill 補齊。"
+      "note": "20 筆已建立於 Notion 並記錄於 memory/skill-index.json。其中 1 筆（bc9c284e5a10, ui-audit）已完成 get_skill 完整內容取得與四項評估（端到端試點）；其餘 19 筆仍僅有 mcp__github__search_code 的 text_matches 片段（frontmatter 層級），實用度／可信度／可行度為 unknown，且 Analyzed Commit／Source Updated At 兩個欄位需按 docs/validation-log.md 記載的方法修正，列入 backlog。"
     }
   },
   "sync": {
@@ -43,26 +51,45 @@
   "validation": {
     "find_skills_cross_agent_test": {
       "date": "2026-09-20",
-      "method": "independent general-purpose agent instance loaded agent/skill-retriever.md as its operating instructions (this session's Agent tool does not expose custom subagent_type dynamically) and executed a find_skills query against the live Notion database",
+      "method": "independent general-purpose agent instance loaded agent/skill-retriever.md as its operating instructions (subagent_type: skill-retriever was not yet dynamically available at this point) and executed a find_skills query against the live Notion database",
       "task": "Flutter App 行動版 UI/UX 設計與稽核流程",
       "result": "passed — returned 3 candidates all correctly marked 待評估 (not 可推薦), correctly cited relationships.json's duplicate flag between e4e5c026b7c1 and 3ffa6a196cea, and explicitly stated only popularity is scored while utility/trustworthiness/feasibility remain unknown"
+    },
+    "get_skill_end_to_end_pipeline": {
+      "date": "2026-09-20",
+      "skill_id": "bc9c284e5a10",
+      "steps_passed": ["git clone full content retrieval", "4-dimension scoring with full evidence", "Notion page update", "cache package delivery with relative paths preserved", "GitHub backup push"],
+      "result": "passed",
+      "notes": "found and fixed two systemic data-quality bugs from the first batch (blob-sha-as-commit, updated_at-as-pushed_at); see docs/validation-log.md"
+    },
+    "get_skill_cross_agent_test": {
+      "date": "2026-09-20",
+      "method": "independent agent instance invoked via Agent tool with subagent_type: skill-retriever (now dynamically available in this session), asked to independently git-clone bc9c284e5a10 into its own scratch path and diff against the canonical cache",
+      "result": "passed — commit sha matched exactly (eea862b35b6c472590c6c72b91e0cc2c184f5326), diff -rq reported zero differences, agent explicitly confirmed no scripts executed and no dependencies installed"
+    },
+    "failure_simulations": {
+      "date": "2026-09-20",
+      "method": "isolated sandbox only — no production Notion data or the real backup repo were touched",
+      "retry_limit": "passed — 3 attempts against a guaranteed-nonexistent repo with 2s/4s backoff, then stopped; simulated stale data (popularity_score) preserved, last_check_succeeded untouched, last_error recorded",
+      "manual_field_guard": "passed — scripts/guard_protected_fields.py correctly allowed a normal payload and rejected two payloads touching User Notes / Manual Feedback",
+      "backup_failure_pending_sync": "passed — sandbox git repo push to a nonexistent remote failed as expected; both local commits (including the unsynced one) survived intact; demonstrated a pending_sync:true state record with reason and the unsynced local commit sha"
     }
   },
   "backlog": [
     {
-      "item": "對已收錄的 20 個 UI/UX Skill 執行 get_skill（完整套件下載），補齊實用度／可信度／可行度評分，取代目前的 unknown 狀態",
+      "item": "對其餘 19 個 UI/UX Skill 執行 get_skill（完整套件下載）與四項評估，補齊實用度／可信度／可行度，並修正 Analyzed Commit（誤用 blob sha）與 Source Updated At（誤用 updated_at）兩個資料品質問題",
       "priority": "high"
     },
     {
-      "item": "人工確認 sboghossian/design-skill 與 migueljnew-droid/ui-ux-gold-standard 的來源鏈關係（見 relationships.json 中的『待確認』項目）",
+      "item": "konopkja/ethux-design 的 7 個子 Skill（approvals/gas/multichain/onboarding/safety/signing/wallets）結構上符合獨立建檔條件，但建檔會超過首次 20 個上限——已詢問使用者是否建檔、建幾個、或留到下一批次，待回覆",
+      "priority": "waiting_on_user"
+    },
+    {
+      "item": "aa8f8ab8cb24（design-system-library）與其衍生來源 VoltAgent/awesome-design-md 皆無 LICENSE 檔案，授權條款不明確，需於該筆執行完整評估時一併處理可信度扣分",
       "priority": "medium"
     },
     {
-      "item": "評估是否要把 konopkja/ethux-design 的 8 個子 Skill 個別建檔（目前僅收錄頂層索引 Skill）",
-      "priority": "low"
-    },
-    {
-      "item": "Agent Office 開啟時自動觸發背景維護——待 Agent Office 支援對應事件機制後再串接（見 agent_office 欄位）",
+      "item": "Agent Office 開啟時自動觸發背景維護——待 Agent Office 支援對應事件機制後再串接（見 agent_office 欄位），本輪未新增 hook 或替代排程",
       "priority": "blocked_on_external"
     }
   ]

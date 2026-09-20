@@ -3,36 +3,37 @@
     "pair": ["140f7ab4ac9d", "51df00b6a70e"],
     "names": ["ux-designer (szilu)", "uiux (DietCokewithSugar)"],
     "relation": "部分重疊",
-    "rationale": "兩者都是「通用 UI/UX 審查與建議」定位，觸發情境高度相似（審查介面、提出改善建議）；差異在於 szilu 版強調無障礙/國際化等具體檢查清單，DietCokewithSugar 版強調『先產生客製 UX 規則再審查』的流程。僅讀 frontmatter，無法確認實際檢查清單是否重複，故判定為部分重疊而非完全重複。",
-    "evidence": "兩者 SKILL.md description 片段",
+    "rationale": "兩者都是「通用 UI/UX 審查與建議」定位，觸發情境高度相似；差異在於 szilu 版強調無障礙/國際化等具體檢查清單，DietCokewithSugar 版強調『先產生客製 UX 規則再審查』的流程。",
+    "evidence": "僅根據兩者 SKILL.md frontmatter description 片段（未讀取完整內容）",
     "confidence": "low",
     "checked_at": "2026-09-20",
-    "conditions": "在同一任務（審查一般網頁 UI）下適用；未核對實際規則內容"
+    "conditions": "在同一任務（審查一般網頁 UI）下適用；未核對實際規則內容，結論僅供初步參考"
   },
   {
     "pair": ["140f7ab4ac9d", "cbef8a80b1bf"],
     "names": ["ux-designer (szilu)", "design (sboghossian)"],
     "relation": "部分重疊",
-    "rationale": "sboghossian/design 聲稱『合成』了 ui-ux-pro-max 等其他 Skill，其涵蓋範圍（審查、Figma 轉碼、色彩排版）與 ux-designer 有重疊，但也包含 ux-designer 未提及的『Figma 稿轉程式碼』能力，屬部分重疊而非單純重複。",
-    "evidence": "兩者 SKILL.md description 片段",
-    "confidence": "low",
-    "checked_at": "2026-09-20"
+    "rationale": "已完整讀取 sboghossian/design 的 SKILL.md 全文（本輪端到端試點的延伸調查）：其實際內容是一套『反 AI-slop』的視覺設計建構流程（四大禁令、brand-spec 定調、Playwright 瀏覽器截圖驗證、Figma/Lovable/Supabase MCP 整合），偏向『動手做設計並驗證』；szilu/ux-designer 則偏向『UX 原則與審查清單』（WCAG/EAA 無障礙稽核、微文案、國際化、語音介面）。兩者在『審查/重構既有畫面』『稽核設計』的請求情境上有重疊（design 的 Common request patterns 明確列出 Audit/Redesign），但方法論與涵蓋深度不同，屬部分重疊而非重複。",
+    "evidence": "sboghossian/design 為完整內容（git clone 全讀）；szilu/ux-designer 仍僅有 frontmatter 片段",
+    "confidence": "medium",
+    "checked_at": "2026-09-20",
+    "note": "信心標為 medium 是因為只有一側（design）有完整證據；若要達到 high，需補讀 ux-designer 的完整內容"
   },
   {
     "pair": ["cbef8a80b1bf", "bc8f5c0bb74a"],
     "names": ["design (sboghossian)", "ui-ux-pro-max (migueljnew-droid)"],
-    "relation": "待確認",
-    "rationale": "sboghossian/design 的 description 明確聲稱『合成』了名為 ui-ux-pro-max 的既有 Skill，暗示與本項目收錄的 migueljnew-droid/ui-ux-gold-standard（其 SKILL.md name 亦為 ui-ux-pro-max）可能有直接引用或衍生關係，但未核對是否為同一來源、是否已徵得授權，需人工確認來源鏈。",
-    "evidence": "sboghossian summary 提及『ui-ux-pro-max』；migueljnew-droid 的 SKILL.md frontmatter name 欄位即為 `ui-ux-pro-max`",
-    "confidence": "low",
+    "relation": "無明顯關聯",
+    "rationale": "【已調查並釐清，取代原本的『待確認』】已完整讀取 sboghossian/design-skill 的 SKILL.md 全文與整個 repo 樹（reference/ 8 個檔案、README、LICENSE）。原判斷依據是 design 的 description 提及『synthesis of four reference skills (impeccable, ui-ux-pro-max, taste-skill, huashu-design)』。逐一比對後：(1) repo 內無任何檔案提及 migueljnew-droid 或 ui-ux-gold-standard 的網址、檔名或內容片段（grep 全庫無命中）；(2) 『ui-ux-pro-max』在 description 中只是一個泛稱式的『參考 Skill 名稱』，未附連結、未附作者、未附版本，無法證實指的就是本目錄收錄的 migueljnew-droid/ui-ux-gold-standard（該 repo 的 SKILL.md frontmatter name 欄位剛好也叫 ui-ux-pro-max，但這類命名在 UI/UX Skill 生態圈中並不罕見，屬同名巧合的可能性無法排除）；(3) 兩者的實際內容組織方式（design 走『四大禁令 + brand-spec + 瀏覽器驗證』的建構流程；ui-ux-gold-standard 走『28 技巧/5 引擎/24 資料庫』的行銷式清單）差異很大，看不出重疊或抄襲痕跡。結論：查無實據支持兩者有直接引用或衍生關係，改列為無明顯關聯；若之後想繼續深究，需要向 sboghossian 本人求證他所指的『ui-ux-pro-max』具體是哪個來源。",
+    "evidence": "sboghossian/design-skill 完整內容（git clone 全讀，含 grep 交叉比對）；migueljnew-droid/ui-ux-gold-standard 仍僅有 frontmatter 片段",
+    "confidence": "medium",
     "checked_at": "2026-09-20"
   },
   {
     "pair": ["e4e5c026b7c1", "3ffa6a196cea"],
     "names": ["Mobile App Design Standards (awesome-skills)", "mobile-uiux-pro-max (noumanzindani)"],
     "relation": "重複",
-    "rationale": "兩者都是「跨平台行動 App UI/UX 設計與稽核」定位，皆涵蓋 iOS/Android、無障礙／WCAG；noumanzindani 版範圍更廣（多加 Flutter/RN/SwiftUI/Compose/Expo/Ionic/.NET MAUI 與 Material 3/Apple HIG iOS 26），屬功能高度重複，可视為同類目標下的競品，需再核對實際規則內容才能判斷是否其中一方可被取代。",
-    "evidence": "兩者 SKILL.md description 片段",
+    "rationale": "兩者都是「跨平台行動 App UI/UX 設計與稽核」定位，皆涵蓋 iOS/Android、無障礙／WCAG；noumanzindani 版範圍更廣（多加 Flutter/RN/SwiftUI/Compose/Expo/Ionic/.NET MAUI 與 Material 3/Apple HIG iOS 26）。",
+    "evidence": "僅根據兩者 SKILL.md frontmatter description 片段（未讀取完整內容），結論保守",
     "confidence": "low",
     "checked_at": "2026-09-20"
   },
@@ -40,17 +41,18 @@
     "pair": ["e587c88401c0", "90c34c16344d"],
     "names": ["figma-swiftui-ios26 (rgehrkedk)", "figma-use (dannote)"],
     "relation": "互補",
-    "rationale": "figma-use 提供操作 Figma 本身（建立/修改/匯出）的通用 CLI 能力；figma-swiftui-ios26 則是特定於「Figma 設計 ↔ SwiftUI 程式碼」雙向轉換的橋接邏輯，可在 figma-use 提供的操作能力之上運作，屬互補而非重疊。",
-    "evidence": "兩者 SKILL.md description 片段",
-    "confidence": "medium",
-    "checked_at": "2026-09-20"
+    "rationale": "figma-use 提供操作 Figma 本身（建立/修改/匯出）的通用 CLI 能力；figma-swiftui-ios26 則是特定於「Figma 設計 ↔ SwiftUI 程式碼」雙向轉換的橋接邏輯。",
+    "evidence": "僅根據兩者 SKILL.md frontmatter description 片段（未讀取完整內容）",
+    "confidence": "low",
+    "checked_at": "2026-09-20",
+    "note": "原信心標記為 medium，本輪依規則下修為 low：結論僅由 description 文字合理推論，未實際核對兩者是否共用同一套 Figma MCP 工具介面"
   },
   {
     "pair": ["14b7ae22b3f5", "d1803efc3ad5"],
     "names": ["ux-flow-designer (ThomasPraun)", "figma-wireframe (OlliberK)"],
     "relation": "部分重疊",
-    "rationale": "兩者都產生 wireframe／流程層級的產出，但 ux-flow-designer 側重 Mermaid 流程圖 + HTML wireframe + use case 文件，figma-wireframe 側重產生『可匯入 Figma 外掛的 JSON』；輸出格式不同，但任務目標（畫面/流程先行驗證）重疊。",
-    "evidence": "兩者 SKILL.md description 片段",
+    "rationale": "兩者都產生 wireframe／流程層級的產出，但 ux-flow-designer 側重 Mermaid 流程圖 + HTML wireframe + use case 文件，figma-wireframe 側重產生『可匯入 Figma 外掛的 JSON』；輸出格式不同，但任務目標重疊。",
+    "evidence": "僅根據兩者 SKILL.md frontmatter description 片段（未讀取完整內容）",
     "confidence": "low",
     "checked_at": "2026-09-20"
   },
@@ -59,7 +61,7 @@
     "names": ["ux-flow-designer (ThomasPraun)", "UX Wireframe Designer (williamzujkowski)"],
     "relation": "部分重疊",
     "rationale": "兩者皆處理『使用者流程 + wireframe』產出，任務目標相近；williamzujkowski 版更著重業界標準符號與互動式 mockup，ThomasPraun 版更著重銜接 PRD 與可匯出 Figma。",
-    "evidence": "兩者 SKILL.md description 片段",
+    "evidence": "僅根據兩者 SKILL.md frontmatter description 片段（未讀取完整內容）",
     "confidence": "low",
     "checked_at": "2026-09-20"
   },
@@ -67,27 +69,40 @@
     "pair": ["b4616b71eb63", "3ffa6a196cea"],
     "names": ["apple-hig (justinwetch)", "mobile-uiux-pro-max (noumanzindani)"],
     "relation": "互補",
-    "rationale": "noumanzindani 版在 description 中明確提及套用『Apple HIG（iOS 26 Liquid Glass）』，apple-hig 提供的正是該平台規則的權威參考來源，兩者可搭配使用（先查 HIG 規則、再套用到行動 App 設計流程）。",
-    "evidence": "noumanzindani summary 明確引用 Apple HIG；apple-hig 為專門的 HIG 參考 Skill",
-    "confidence": "medium",
-    "checked_at": "2026-09-20"
+    "rationale": "noumanzindani 版在 description 中明確提及套用『Apple HIG（iOS 26 Liquid Glass）』，apple-hig 提供的正是該平台規則的權威參考來源。",
+    "evidence": "僅根據兩者 SKILL.md frontmatter description 片段（未讀取完整內容）",
+    "confidence": "low",
+    "checked_at": "2026-09-20",
+    "note": "原信心標記為 medium，本輪依規則下修為 low：雖然 noumanzindani 明確點名 Apple HIG，但未實際核對 apple-hig 的規則版本是否與其引用的『iOS 26 Liquid Glass』一致"
   },
   {
     "pair": ["cc99639aed67", "140f7ab4ac9d"],
     "names": ["nerv-ui (TheGreatGildo)", "ux-designer (szilu)"],
     "relation": "無明顯關聯",
-    "rationale": "nerv-ui 是高度風格化、特定美術方向（Evangelion 主題）的元件庫，非通用 UX 方法論；與 ux-designer 這類通用審查/原則型 Skill 目標與適用情境不同，不構成競品關係。",
-    "evidence": "兩者 SKILL.md description 片段",
-    "confidence": "medium",
-    "checked_at": "2026-09-20"
+    "rationale": "nerv-ui 是高度風格化、特定美術方向（Evangelion 主題）的元件庫，非通用 UX 方法論；與 ux-designer 這類通用審查/原則型 Skill 目標與適用情境不同。",
+    "evidence": "僅根據兩者 SKILL.md frontmatter description 片段（未讀取完整內容）",
+    "confidence": "low",
+    "checked_at": "2026-09-20",
+    "note": "原信心標記為 medium，本輪依規則下修為 low"
   },
   {
     "pair": ["bb21949b19c2", "140f7ab4ac9d"],
     "names": ["ethux-design (konopkja)", "ux-designer (szilu)"],
     "relation": "無明顯關聯",
-    "rationale": "ethux-design 是 Ethereum dApp 垂直領域的互動設計模式索引，與通用 UI/UX 審查 Skill 目標不同、任務情境不重疊（前者聚焦錢包/gas/簽署等 Web3 特定流程）。",
-    "evidence": "兩者 SKILL.md description 片段",
-    "confidence": "medium",
-    "checked_at": "2026-09-20"
+    "rationale": "ethux-design 是 Ethereum dApp 垂直領域的互動設計模式索引，與通用 UI/UX 審查 Skill 目標不同、任務情境不重疊。",
+    "evidence": "僅根據兩者 SKILL.md frontmatter description 片段（未讀取完整內容）",
+    "confidence": "low",
+    "checked_at": "2026-09-20",
+    "note": "原信心標記為 medium，本輪依規則下修為 low"
+  },
+  {
+    "pair": ["aa8f8ab8cb24", "external:VoltAgent/awesome-design-md"],
+    "names": ["design-system-library (aaldere1)", "awesome-design-md (VoltAgent，非本目錄收錄項目，僅作為來源方標註)"],
+    "relation": "衍生自",
+    "rationale": "【已調查並釐清，取代原摘要中的模糊備註】已完整讀取 aaldere1/awesome-design-systems 的 README.md：作者明確聲明『Based on the incredible awesome-design-md collection by VoltAgent. All design system files are sourced from their work. This repo repackages them as a Paperclip-compatible skill with routing logic and categorization.』這是清楚揭露的衍生關係，非抄襲爭議——58 個 references/*.md 內容直接取自 VoltAgent/awesome-design-md，本 repo 加上路由邏輯與分類包裝。VoltAgent/awesome-design-md 不在本目錄的 20 個收錄項目內，僅作為來源方記錄，不佔用收錄名額。",
+    "evidence": "aaldere1/awesome-design-systems 完整 README.md（git clone 全讀，作者明確聲明）",
+    "confidence": "high",
+    "checked_at": "2026-09-20",
+    "caveat": "aaldere1/awesome-design-systems 與其聲稱的來源 VoltAgent/awesome-design-md 皆未找到 LICENSE 檔案，雖然衍生關係揭露清楚，但雙方授權條款不明確，已同步反映在 aa8f8ab8cb24 的可信度評估備註中（可信度本身仍列為 unknown，待該筆完整四項評分時一併處理）"
   }
 ]

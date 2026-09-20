@@ -42,19 +42,26 @@
     "name": "ui-audit",
     "repo": "tommygeoco/ui-audit",
     "skill_path": "SKILL.md",
-    "analyzed_commit": "e7d63ecb8f8",
-    "source_updated_at": "2026-09-18",
-    "popularity_score": 35,
+    "analyzed_commit": "eea862b35b6c",
+    "source_updated_at": "2026-01-18",
+    "popularity_score": 30,
     "stars": 25,
     "forks": 2,
     "notion_page_id": "3e105064-114a-81e7-86b9-c7b4a37e469d",
     "notion_page_url": "https://app.notion.com/p/3e105064114a81e786b9c7b4a37e469d",
-    "recommendation_status": "待評估",
+    "recommendation_status": "需人工確認",
     "last_check_attempted": "2026-09-20",
     "last_check_succeeded": "2026-09-20",
     "tags": [
       "UI/UX"
-    ]
+    ],
+    "utility_score": 84,
+    "trustworthiness_score": 71,
+    "feasibility_score": 98,
+    "confidence": "medium",
+    "package_cached_at": "~/.claude/skill-retriever-cache/bc9c284e5a10/eea862b35b6c/",
+    "full_content_analyzed": true,
+    "notes": "端到端試點：完整四項評估已完成，取代原本 frontmatter-only 的估計值；分析方法見 docs/validation-log.md"
   },
   {
     "skill_id": "14b7ae22b3f5",
