@@ -18,7 +18,7 @@
     "maintenance_triggers": ["direct_user_call", "other_agent_refresh_skills_call"]
   },
   "scoring_rules_version": "scoring-rules@1.0.0",
-  "overall_status": "基礎建置完成，部分驗收待完成",
+  "overall_status": "首批 20 個 Skill 全數完成四項評估與 Notion／備份同步；refresh_skills 與同時觸發合併已由文字規則改為實測通過的真實實作；Agent Office 開啟觸發仍為待整合",
   "overall_status_set_on": "2026-09-20",
   "content_access_method": {
     "finding": "mcp__github__get_file_contents 等 GitHub MCP 內容工具僅能存取本工作階段已明確 add_repo 的 repo；此為該工具本身的授權範圍設計，不是使用者未授權讀取公開 GitHub",
@@ -38,9 +38,9 @@
     "ui_ux_initial_batch": {
       "target_count": 20,
       "collected_count": 20,
-      "status": "1_of_20_fully_analyzed",
+      "status": "20_of_20_fully_analyzed",
       "completed_at": "2026-09-20",
-      "note": "20 筆已建立於 Notion 並記錄於 memory/skill-index.json。其中 1 筆（bc9c284e5a10, ui-audit）已完成 get_skill 完整內容取得與四項評估（端到端試點）；其餘 19 筆仍僅有 mcp__github__search_code 的 text_matches 片段（frontmatter 層級），實用度／可信度／可行度為 unknown，且 Analyzed Commit／Source Updated At 兩個欄位需按 docs/validation-log.md 記載的方法修正，列入 backlog。"
+      "note": "20 筆全數完成完整內容取得（git clone 全讀，非 shallow）與四項評估，寫回 memory/skill-index.json；Analyzed Commit 全數改為真正 commit sha（git rev-parse HEAD），repo 推送時間（repo_pushed_at）與 Skill 檔案本身最後修改時間（skill_file_last_modified_at + skill_file_last_commit）分開記錄。29483f6259ab、44dd2a37f2cb 兩筆上一輪因時間因素暫缺的可信度／可行度分數本輪已補齊為實際評分。bc8f5c0bb74a、e4e5c026b7c1（授權不明確）與 bb21949b19c2（7 個子 Skill 未獨立建檔，見 backlog）維持標示「需人工確認」或保留待辦，未強行給分或省略必要資源。"
     }
   },
   "sync": {
@@ -73,13 +73,28 @@
       "retry_limit": "passed — 3 attempts against a guaranteed-nonexistent repo with 2s/4s backoff, then stopped; simulated stale data (popularity_score) preserved, last_check_succeeded untouched, last_error recorded",
       "manual_field_guard": "passed — scripts/guard_protected_fields.py correctly allowed a normal payload and rejected two payloads touching User Notes / Manual Feedback",
       "backup_failure_pending_sync": "passed — sandbox git repo push to a nonexistent remote failed as expected; both local commits (including the unsynced one) survived intact; demonstrated a pending_sync:true state record with reason and the unsynced local commit sha"
+    },
+    "remaining_19_full_pipeline": {
+      "date": "2026-09-20",
+      "method": "git clone (full, non-shallow) all 19 repos into /tmp/batch2/, full SKILL.md + LICENSE + suspicious-pattern scan for each, compiled into /tmp/batch2/scores.json, then written to memory/skill-index.json and Notion",
+      "result": "passed for all 19 — all four dimensions checked per skill; scores given only where evidence supports them, unknown/需人工確認 recorded with reasons where it doesn't (bc8f5c0bb74a, e4e5c026b7c1 license ambiguity)",
+      "notes": "carmahhawwari (29483f6259ab) and albertzhangz10 (44dd2a37f2cb) trust/feasibility, left incomplete in the prior round due to time constraints (not evidence gaps), were completed this round with real scores and rationale"
+    },
+    "commit_and_time_field_audit": {
+      "date": "2026-09-20",
+      "method": "programmatic validation of all 20 memory/skill-index.json entries",
+      "result": "passed — confirmed analyzed_commit is a real commit sha (git rev-parse HEAD) for all 20, never a search_code blob sha; confirmed repo_pushed_at (repo-level git log date) and skill_file_last_modified_at + skill_file_last_commit (file-level git log date/commit) are recorded as separate fields for all 20; confirmed the old ambiguous source_updated_at field was removed from all 20",
+      "example_discrepancy_found": "bb21949b19c2: repo_pushed_at=2026-08-09 vs skill_file_last_modified_at=2026-05-14 — genuinely different commits, proving the separation is not cosmetic"
+    },
+    "refresh_skills_real_execution": {
+      "date": "2026-09-20",
+      "method": "scripts/refresh_skills.py executed with real OS-level concurrent processes (bash background jobs + sleep-staggered start), isolated sandbox at /tmp/refresh-test/ operating on a copied index file and an isolated SKILL_RETRIEVER_MEMORY_DIR — production memory/ and Notion untouched",
+      "result": "passed — (1) single user_direct_call run succeeded; (2) single refresh_skills_call run with apply_updates succeeded and wrote back timestamps; (3) two same-scope (all/all) concurrent triggers 0.3s apart correctly merged — the later request returned the exact result of the in-flight run tagged merged_into_existing_run:true, log shows only one ACQUIRED/DONE pair; (4) two incompatible-scope concurrent triggers correctly did NOT merge — each ran its own independent execution after queuing for the lock",
+      "evidence_files": ["docs/evidence/refresh_skills_test3_same_scope_merge.log", "docs/evidence/refresh_skills_test3_merged_response_example.json", "docs/evidence/refresh_skills_test4_incompatible_scope.log"],
+      "note": "this replaces the previously prose-only rule in docs/interfaces.md ('相同範圍重複觸發時合併') with an executable implementation whose merge-compatibility boundary is now explicit and tested"
     }
   },
   "backlog": [
-    {
-      "item": "對其餘 19 個 UI/UX Skill 執行 get_skill（完整套件下載）與四項評估，補齊實用度／可信度／可行度，並修正 Analyzed Commit（誤用 blob sha）與 Source Updated At（誤用 updated_at）兩個資料品質問題",
-      "priority": "high"
-    },
     {
       "item": "konopkja/ethux-design 的 7 個子 Skill（approvals/gas/multichain/onboarding/safety/signing/wallets）結構上符合獨立建檔條件，但使用者已決定：維持首次 20 上限，暫不新增獨立 Notion 記錄，留到下一批次；名稱／路徑／來源版本已記在 memory/skill-index.json 的 bb21949b19c2 條目（required_subresources）。下一批次建檔時直接取用該筆記錄即可，不必重新調查。",
       "priority": "next_batch",

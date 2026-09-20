@@ -80,7 +80,37 @@ Notion 目錄的收錄範圍，不影響單一套件本身該有的完整性。�
 輸入：`{ "scope": "all|<tag>|[skill_ids]", "mode": "check_only|apply_updates" }`
 
 輸出：新增、更新、失效、待確認、錯誤的摘要清單。`check_only` 僅比對來源狀態不寫入 Notion；
-`apply_updates` 才實際更新記錄。相同範圍重複觸發且仍在執行中時合併請求，不重複執行。
+`apply_updates` 才實際更新記錄。
+
+**實際實作（已取代原本的純文字規則）**：`scripts/refresh_skills.py`。使用者直接呼叫維護、
+其他 Agent 呼叫 `refresh_skills`、以及（未來整合後的）Agent Office 開啟觸發，三者共用
+同一支腳本與同一把檔案鎖（`~/.claude/skill-retriever-memory/refresh.lock`），差異僅在
+`--trigger-source` 參數不同，用於記錄觸發來源，不影響執行邏輯。
+
+**合併規則（已明訂邊界，取代原本模糊的「相同範圍重複觸發時合併」）**：
+- 新請求的 scope 與執行中的 scope **完全相同**，或被執行中的 `scope=all` 涵蓋
+  → 合併：不重複執行，等待現有執行完成後回傳同一份結果（標記
+  `merged_into_existing_run: true`、`merged_with: <被合併的 request_id>`）。
+- scope 不相容（例如一邊指定特定 skill_id、另一邊是特定標籤，且都不是 `all`）
+  → 不合併，改為排隊等鎖，鎖釋放後各自獨立執行一次，避免同時寫入
+  `memory/skill-index.json` 造成資料損毀，但不偽稱是同一次執行的結果。
+
+已於 2026-09-20 在隔離沙盒（`/tmp/refresh-test/`，操作獨立複製的 index 檔，未觸碰
+正式 `memory/` 目錄）以真實平行程序（非文字模擬）驗證：
+1. 使用者直接觸發維護（`--trigger-source user_direct_call`，單一呼叫）→ 正確跑完、
+   回傳 20 筆 `checked` 清單。
+2. `refresh_skills` 介面呼叫（`--trigger-source refresh_skills_call`，`apply_updates`
+   模式，範圍限定 `UI/UX` 標籤）→ 正確寫回 `last_check_attempted`/`last_check_succeeded`。
+3. 兩個「相同範圍」（皆為 `all`）的請求相隔 0.3 秒同時觸發（其中一個故意讓實際工作
+   耗時 3 秒以製造真實重疊視窗）→ 後到的請求正確被合併，回傳與先到請求完全相同的
+   `request_id`／結果內容，只多了 `merged_into_existing_run: true` 與
+   `merged_with` 欄位；`refresh.log` 顯示只有一次 `ACQUIRED`／`DONE`，沒有重複執行。
+4. 兩個「不相容範圍」（一個是特定 `skill_id`、一個是 `UI/UX` 標籤）相隔 0.3 秒同時
+   觸發 → 未被誤判為合併，第二個請求排隊等鎖後獨立執行了自己的一次完整流程
+   （各自的 `request_id` 不同、`merged_into_existing_run: false`），驗證「不相容
+   範圍不會被錯誤合併」。
+
+詳細指令與完整輸出見 `docs/validation-log.md`。
 
 ## 錯誤與重試
 

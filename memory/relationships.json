@@ -32,10 +32,21 @@
     "pair": ["e4e5c026b7c1", "3ffa6a196cea"],
     "names": ["Mobile App Design Standards (awesome-skills)", "mobile-uiux-pro-max (noumanzindani)"],
     "relation": "重複",
-    "rationale": "兩者都是「跨平台行動 App UI/UX 設計與稽核」定位，皆涵蓋 iOS/Android、無障礙／WCAG；noumanzindani 版範圍更廣（多加 Flutter/RN/SwiftUI/Compose/Expo/Ionic/.NET MAUI 與 Material 3/Apple HIG iOS 26）。",
-    "evidence": "僅根據兩者 SKILL.md frontmatter description 片段（未讀取完整內容），結論保守",
+    "rationale": "【本輪已補讀兩者完整 SKILL.md 全文，結論維持「重複」但補上信任落差備註】兩者都是「跨平台行動 App UI/UX 設計與稽核」定位，皆涵蓋 iOS/Android、無障礙／WCAG、觸控目標尺寸、對比度標準；noumanzindani 版涵蓋範圍更廣（另含 Flutter/RN/SwiftUI/Compose/Expo/Ionic/.NET MAUI 與 Apple HIG iOS 26 / Material 3 的具體引用）。任務重疊度高，功能重複判斷維持不變。",
+    "evidence": "兩者皆為完整 SKILL.md 內容（git clone 全讀，含 reference/scripts 檔案樹核對）",
+    "confidence": "high",
+    "checked_at": "2026-09-20",
+    "trust_disparity_note": "兩者可信度證據不對等：awesome-skills/mobile-app-design（e4e5c026b7c1）repo 內找不到 LICENSE 檔案，授權不明，已標記需人工確認；noumanzindani/mobile-app-uiux-pro-max-skill（3ffa6a196cea）附有明確 Apache License 2.0 全文。在『重複』判斷下選用時，這項可信度落差應納入使用者的實際選型考量，不可僅以功能重疊判斷等同推薦。"
+  },
+  {
+    "pair": ["14b7ae22b3f5", "bc8f5c0bb74a"],
+    "names": ["ux-flow-designer (ThomasPraun)", "ui-ux-gold-standard (migueljnew-droid)"],
+    "relation": "待確認",
+    "rationale": "【新發現，來源鏈追查】ThomasPraun/ux-flow-designer 的 SKILL.md 明確聲明其輸出為下游 Skill『ui-ux-pro-max』的輸入（Bridges Product (PRD) and Visual Design phases. Outputs serve as input for ui-ux-pro-max），並在啟動時執行前置檢查 `CHECK ~/.claude/skills/ui-ux-pro-max/ exists`，缺少時導向 `references/install-commands.md` 建議執行 `npx skills find ui-ux-pro-max` 從某個 Skill 市集/註冊表安裝。同時，migueljnew-droid/ui-ux-gold-standard（bc8f5c0bb74a）的 SKILL.md frontmatter `name` 欄位恰好逐字相符，即 `name: ui-ux-pro-max`。這構成「名稱相符」的巧合證據鏈，但屬無法證實：(1) `npx skills find <name>` 指向的是某個外部 Skill 市集/註冊表的查詢結果，並非直接的 GitHub 網址或 commit 參照，本次調查未執行該指令、無法得知該市集在查詢當下實際解析到哪一個 repo；(2) 『ui-ux-pro-max』作為功能命名在 UI/UX Skill 生態圈本身就有被重複使用的可能（同目錄下 noumanzindani/mobile-app-uiux-pro-max-skill 的 frontmatter name 為 `mobile-uiux-pro-max`，非完全相符，可排除該筆，但不能排除市集中還有其他同名或近似名稱的第三方 Skill）；(3) 兩個 repo 之間沒有互相連結、引用網址或作者關聯的直接證據。結論：這是一條有意義但未證實的來源鏈線索，列為『待確認』而非『重複』或『互補』，需要實際執行 `npx skills find ui-ux-pro-max` 觀察市集解析結果，或向兩位作者求證，才能提升信心。",
+    "evidence": "ThomasPraun/ux-flow-designer 完整內容（SKILL.md + references/install-commands.md，git clone 全讀）；migueljnew-droid/ui-ux-gold-standard 完整內容（SKILL.md 全文，git clone 全讀，frontmatter name 逐字核對）",
     "confidence": "low",
-    "checked_at": "2026-09-20"
+    "checked_at": "2026-09-20",
+    "conditions": "若使用者或另一 Agent 之後執行 `npx skills find ui-ux-pro-max` 並確認其實際安裝來源，應回填本筆並視結果改判為「互補」（若確為同一 Skill 的上下游銜接）或撤回本筆（若市集解析到完全不同的第三方 Skill）"
   },
   {
     "pair": ["e587c88401c0", "90c34c16344d"],

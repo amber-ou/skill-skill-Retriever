@@ -1,0 +1,7 @@
+2026-09-20T11:56:30.645115+00:00 pid=1549 REQUEST req_id=1549-1789905390.644972 scope=['bc9c284e5a10'] mode=check_only source=user_direct_call
+2026-09-20T11:56:30.645314+00:00 pid=1549 ACQUIRED req_id=1549-1789905390.644972 — running actual refresh
+2026-09-20T11:56:30.943405+00:00 pid=1551 REQUEST req_id=1551-1789905390.943336 scope=UI/UX mode=check_only source=refresh_skills_call
+2026-09-20T11:56:30.943544+00:00 pid=1551 QUEUE req_id=1551-1789905390.943336 incompatible scope (existing=['bc9c284e5a10'] new=UI/UX), waiting for lock to run independently
+2026-09-20T11:56:32.646333+00:00 pid=1549 DONE req_id=1549-1789905390.644972
+2026-09-20T11:56:32.646812+00:00 pid=1551 ACQUIRED req_id=1551-1789905390.943336 — running actual refresh
+2026-09-20T11:56:32.647859+00:00 pid=1551 DONE req_id=1551-1789905390.943336

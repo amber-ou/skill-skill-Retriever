@@ -46,6 +46,59 @@
 | 人工欄位保護 | 以 `scripts/guard_protected_fields.py` 對三組 payload（正常更新／夾帶 User Notes／夾帶 Manual Feedback）跑保護邏輯 | 正常 payload 放行；兩組夾帶人工欄位的 payload 皆被正確拒絕並丟出例外 |
 | 備份失敗待同步 | 在獨立沙盒 git repo 中，本地先產生一筆新 commit，再將遠端指向保證不存在的 repo 並嘗試推送 | 推送依預期失敗（403／找不到 repo）；本地兩筆 commit（含尚未同步的那筆）完整保留、內容未遺失；示範寫回 `sync` 區塊的 `pending_sync: true` 狀態記錄，含失敗原因與待同步的本地 commit sha |
 
+## 2026-09-20（第三輪：其餘 19 個 Skill 全量分析、commit/時間欄位分離、refresh_skills 真實實作）
+
+### 1. 其餘 19 個 Skill 的完整流程套用
+
+對第二輪剩下的 19 個 Skill（20 個收錄項目扣除已完成端到端試點的 `bc9c284e5a10`）
+逐一執行：`git clone`（非 shallow，以取得檔案層級 commit 歷史）→ 完整讀取
+`SKILL.md`／`README`／`references`／`LICENSE`／可疑指令掃描 → 四項評估 → 寫回
+`memory/skill-index.json` → 更新 Notion。四項評估均逐一檢查；`29483f6259ab`
+（carmahhawwari/ui-design-brain）與 `44dd2a37f2cb`（albertzhangz10/design-system-skill）
+在上一輪因時間因素可信度／可行度暫缺，本輪已補齊實際評分（分別為 80/98 與
+100/100），不再是「證據不足」，已於各自 `notes` 中註明原因與計算依據。
+
+授權不明確項目（`bc8f5c0bb74a` migueljnew-droid、`e4e5c026b7c1` awesome-skills，
+以及 `aa8f8ab8cb24` aaldere1 的既有備註）維持保留證據、標示「需人工確認」，不強行
+給可信度分數；其餘可執行的分析（熱門度／實用度／可行度、關係比對）照常完成。
+
+### 2. commit 與時間欄位全面重整（20 筆）
+
+對全部 20 筆記錄，一律改用：
+- `analyzed_commit`：`git rev-parse HEAD`（該次分析對應的完整 repo 快照 commit），
+  **不再使用** `search_code` 回傳的檔案 blob sha。
+- `repo_pushed_at`：`git log -1 --format=%cI`（repo 層級最後一次 commit 時間，
+  換算為 UTC 日期），作為 repo 推送時間的代理指標。
+- `skill_file_last_modified_at` + `skill_file_last_commit`：
+  `git log -1 --format=%cI -- <skill 檔案路徑>`，Skill 檔案本身最後被修改的
+  commit 與時間，與上面的 repo 層級時間**分開記錄**（兩者可能差距很大，例如
+  `bb21949b19c2` repo 最後推送 2026-08-09，但其頂層索引檔案本身最後修改於
+  2026-05-14）。
+- 舊有單一欄位 `source_updated_at`（混用 repo/檔案時間、且第一批曾誤用
+  `updated_at`）已從全部 20 筆移除，含補溯修正先前僅完成端到端試點的
+  `bc9c284e5a10`（新增分離後的 `repo_pushed_at`/`skill_file_last_modified_at`/
+  `skill_file_last_commit`，並以完整 clone 重新驗證兩者確實對應不同 commit）。
+
+驗證方式：對 `memory/skill-index.json` 全部 20 筆執行程式化檢查，確認
+`source_updated_at` 已完全移除、`analyzed_commit` 長度與格式符合 commit sha
+（非 40 字元 blob sha 誤植、非 URL）、四個新欄位皆存在。
+
+### 3. refresh_skills 由文字規則改為真實可執行實作
+
+新增 `scripts/refresh_skills.py`：以檔案鎖（`fcntl.flock`）實作「同一時間只有一個
+實際執行」，並明訂 scope 相容性判斷規則（完全相同或被 `all` 涵蓋才合併，否則排隊後
+各自獨立執行）。已用真實平行程序（非文字模擬、非單純循序呼叫）在隔離沙盒驗證：
+
+| 測項 | 方法 | 結果 |
+| --- | --- | --- |
+| 使用者直接觸發維護 | 單一呼叫 `--trigger-source user_direct_call --scope all --mode check_only` | 正確執行，回傳 20 筆 `checked` |
+| `refresh_skills` 介面呼叫 | 單一呼叫 `--trigger-source refresh_skills_call --scope UI/UX --mode apply_updates` | 正確執行並寫回 `last_check_attempted`/`last_check_succeeded` |
+| 同時觸發＋相同範圍（合併） | 兩個 `--scope all` 請求相隔 0.3 秒觸發，第一個故意耗時 3 秒 | 第二個請求正確合併：回傳與第一個完全相同的 `request_id`／內容，僅多 `merged_into_existing_run: true`；log 顯示僅一次 `ACQUIRED`/`DONE` |
+| 同時觸發＋不相容範圍（不應合併） | 一個 `--scope ids:bc9c284e5a10`、一個 `--scope UI/UX` 相隔 0.3 秒觸發 | 未誤判為合併，第二個請求排隊等鎖後獨立執行了自己的一次完整流程（各自 `request_id` 不同、皆為 `merged_into_existing_run: false`） |
+
+沙盒操作對象為 `/tmp/refresh-test/` 下的獨立複製檔案（含獨立 `SKILL_RETRIEVER_MEMORY_DIR`），
+未寫入正式 `memory/` 目錄或正式 Notion 資料。完整指令與原始輸出保留在本次工作階段紀錄中。
+
 ## 2026-09-20（關係重新檢視）
 
 - 對所有僅由 SKILL.md frontmatter 片段支持的關係結論，信心一律下修為 `low`，並在 `evidence` 欄位註明「僅根據片段，未讀取完整內容」。
