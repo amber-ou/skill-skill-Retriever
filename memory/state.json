@@ -46,7 +46,9 @@
   "sync": {
     "last_bootstrap_at": "2026-09-20",
     "last_backup_pushed_at": "2026-09-20",
-    "last_backup_commit": "4d8a1f5829ccb0ffa7f5b2344e37b746fd9127d5"
+    "last_backup_commit": "8555604cf119a1800db9237ac677492cc3602147",
+    "backup_history": ["4d8a1f5829ccb0ffa7f5b2344e37b746fd9127d5", "8555604cf119a1800db9237ac677492cc3602147"],
+    "backup_repo_moved_notice": "git push 回報 'This repository moved. Please use the new location: https://github.com/amber-ou/skill-skill-Retriever.git'；推送本身仍成功（960ff64..8555604 v1.0 -> v1.0），僅為 GitHub 提示 remote URL 大小寫正規化，非錯誤，未變更任何設定"
   },
   "validation": {
     "find_skills_cross_agent_test": {
