@@ -9,13 +9,16 @@
     "github_backup_branch": "v1.0",
     "scoring_no_aggregate_total": true,
     "retry_limit": 3,
-    "maintenance_triggers": ["direct_user_call", "agent_office_session_start"]
+    "maintenance_triggers": ["direct_user_call", "other_agent_refresh_skills_call"]
   },
   "scoring_rules_version": "scoring-rules@1.0.0",
   "agent_office": {
-    "identified_as": "amber-ou/agent-office repo, Claude Code session (SessionStart hook)",
-    "open_event_mechanism": "claude_code_session_start_hook",
-    "hook_path_in_agent_office_repo": ".claude/hooks/agent-office-open.sh"
+    "identified_as": "amber-ou/agent-office — a control-plane desktop app (Task -> assign Agent -> Run -> Review), not a CLI/CLAUDE.md hookable repo",
+    "open_event_mechanism": "pending_integration",
+    "reason": "docs/status.md in that repo explicitly scopes out auto-dispatch and background-resident agents for this stage; no on-open trigger exists to hook into yet",
+    "decided_by_user_on": "2026-09-20",
+    "user_decision": "drop the SessionStart-hook workaround; keep direct-call and other-agent-call entry points; mark this as pending, not a delivery blocker, not claimed complete",
+    "future_path": "once Agent Office supports dispatching on an event, register the skill-retriever native CC subagent as an Office Agent via its existing CC<->Office discovery bridge"
   },
   "scan_progress": {
     "ui_ux_initial_batch": {
