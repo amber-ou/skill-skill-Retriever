@@ -1,0 +1,33 @@
+{
+  "confirmed_settings": {
+    "sources": "public_github_with_SKILL.md_no_star_threshold",
+    "initial_scope": "UI/UX, max 20 on first run",
+    "notion_parent_page": "https://app.notion.com/p/3e105064114a80b3b090f22503db8068",
+    "notion_database_url": null,
+    "notion_database_id": null,
+    "github_backup_repo": "amber-ou/skill-skill-Retriever",
+    "github_backup_branch": "v1.0",
+    "scoring_no_aggregate_total": true,
+    "retry_limit": 3,
+    "maintenance_triggers": ["direct_user_call", "agent_office_session_start"]
+  },
+  "scoring_rules_version": "scoring-rules@1.0.0",
+  "agent_office": {
+    "identified_as": "amber-ou/agent-office repo, Claude Code session (SessionStart hook)",
+    "open_event_mechanism": "claude_code_session_start_hook",
+    "hook_path_in_agent_office_repo": ".claude/hooks/agent-office-open.sh"
+  },
+  "scan_progress": {
+    "ui_ux_initial_batch": {
+      "target_count": 20,
+      "collected_count": 0,
+      "status": "not_started"
+    }
+  },
+  "sync": {
+    "last_bootstrap_at": null,
+    "last_backup_pushed_at": null,
+    "last_backup_commit": null
+  },
+  "backlog": []
+}
