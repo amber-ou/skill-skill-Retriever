@@ -25,16 +25,34 @@ bash /tmp/skill-skill-retriever/scripts/bootstrap.sh
 ```
 
 執行後：
-- `~/.claude/agents/skill-retriever.md` 會出現，可用 Agent 工具以
-  `subagent_type: skill-retriever` 呼叫。
+- `~/.claude/agents/skill-retriever.md` 會出現。**注意**：在標準 Claude Code CLI 中，
+  這個檔案可用 Agent／Task 工具以 `subagent_type: skill-retriever` 呼叫；但在部分雲端／
+  遠端工作階段（例如本次建置所在的環境），Agent 工具的 `subagent_type` 清單是固定的，
+  不會動態讀入使用者自訂的 `.claude/agents/*.md`。這種環境下，其他 Agent 目前的實際作法
+  是：讀取本檔案作為操作指示直接執行（例如以 general-purpose Agent 載入本檔內容），
+  而非透過 `subagent_type` 直接派工。
 - `~/.claude/skill-retriever-memory/` 會有 `state.json`／`skill-index.json`／
   `relationships.json` 的工作副本。
 - `~/.claude/skill-retriever-cache/` 為按需下載 Skill 套件的專用快取（初始為空）。
 
 ## 完整目錄與最新分析
 
-以 Notion 為主要人類可讀目錄，資料庫連結見 `memory/state.json` 的 `notion_database_url`
-（建置完成後回填）；本 repo 只保存可還原記憶摘要，不重複保存完整分析內容。
+Notion 資料庫（人類可讀目錄）：https://app.notion.com/p/2ff83cca1acb4e35830458bf33d63fe3
+（`memory/state.json` 的 `notion_database_url` / `notion_data_source_url` 為同一份記錄）。
+本 repo 只保存可還原記憶摘要，不重複保存完整分析內容。
+
+## 目前狀態（2026-09-20）
+
+- 已完成：Notion 資料庫與「全部／可推薦／待處理」三個檢視、UI/UX 首批 20 個 Skill 收錄
+  （來源、commit、熱門度分數皆可追溯）、初步關係分析（重複／部分重疊／互補／無明顯關聯／
+  待確認，共 9 組）、bootstrap／backup 腳本並已端對端驗證。
+- 已知限制：本工作階段的 GitHub 內容讀取權限僅涵蓋明確 `add_repo` 的 repo，因此這批
+  20 個 Skill 的實用度／可信度／可行度目前皆為 `unknown`（僅熱門度為真實評分），需要
+  下一輪以 `get_skill` 下載完整套件後補齊，詳見 `memory/state.json` 的 `backlog`。
+- 「開啟 Agent Office 時自動觸發維護」尚未整合：`amber-ou/agent-office` 是有自己執行模型
+  （Task → 指派 Agent → Run → Review）的控制平面應用程式，其 ADR 明確排除自動派工／
+  背景常駐 Agent，目前沒有可掛載的「開啟」事件；已與使用者確認暫不建置替代方案，
+  維護入口目前僅有「使用者直接呼叫」與「其他 Agent 呼叫 `refresh_skills`」兩種。
 
 ## 安全界線
 
