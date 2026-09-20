@@ -45,8 +45,8 @@
   },
   "sync": {
     "last_bootstrap_at": "2026-09-20",
-    "last_backup_pushed_at": null,
-    "last_backup_commit": null
+    "last_backup_pushed_at": "2026-09-20",
+    "last_backup_commit": "4d8a1f5829ccb0ffa7f5b2344e37b746fd9127d5"
   },
   "validation": {
     "find_skills_cross_agent_test": {
