@@ -3,8 +3,14 @@
     "sources": "public_github_with_SKILL.md_no_star_threshold",
     "initial_scope": "UI/UX, max 20 on first run",
     "notion_parent_page": "https://app.notion.com/p/3e105064114a80b3b090f22503db8068",
-    "notion_database_url": null,
-    "notion_database_id": null,
+    "notion_database_url": "https://app.notion.com/p/2ff83cca1acb4e35830458bf33d63fe3",
+    "notion_database_id": "2ff83cca1acb4e35830458bf33d63fe3",
+    "notion_data_source_url": "collection://d0761761-c277-49b6-a687-bffcd9345869",
+    "notion_views": {
+      "all": "view://3e105064-114a-8142-9167-000c6a6ba7b3",
+      "recommended": "view://3e105064-114a-81b9-83bb-000ca70db029",
+      "pending": "view://3e105064-114a-8188-81cd-000c672fbc7a"
+    },
     "github_backup_repo": "amber-ou/skill-skill-Retriever",
     "github_backup_branch": "v1.0",
     "scoring_no_aggregate_total": true,
@@ -23,14 +29,33 @@
   "scan_progress": {
     "ui_ux_initial_batch": {
       "target_count": 20,
-      "collected_count": 0,
-      "status": "not_started"
+      "collected_count": 20,
+      "status": "collected_popularity_only",
+      "completed_at": "2026-09-20",
+      "note": "20 筆已建立於 Notion 並記錄於 memory/skill-index.json；受限於本工作階段 GitHub 內容讀取權限只涵蓋已 add_repo 的兩個 repo，本輪僅能透過 mcp__github__search_code 的 text_matches 片段取得 SKILL.md frontmatter，未下載完整檔案。因此僅完成熱門度（popularity）評分，實用度／可信度／可行度四項中的其餘三項在 Notion 記錄中皆為 unknown，等待下一輪以 get_skill 補齊。"
     }
   },
   "sync": {
-    "last_bootstrap_at": null,
+    "last_bootstrap_at": "2026-09-20",
     "last_backup_pushed_at": null,
     "last_backup_commit": null
   },
-  "backlog": []
+  "backlog": [
+    {
+      "item": "對已收錄的 20 個 UI/UX Skill 執行 get_skill（完整套件下載），補齊實用度／可信度／可行度評分，取代目前的 unknown 狀態",
+      "priority": "high"
+    },
+    {
+      "item": "人工確認 sboghossian/design-skill 與 migueljnew-droid/ui-ux-gold-standard 的來源鏈關係（見 relationships.json 中的『待確認』項目）",
+      "priority": "medium"
+    },
+    {
+      "item": "評估是否要把 konopkja/ethux-design 的 8 個子 Skill 個別建檔（目前僅收錄頂層索引 Skill）",
+      "priority": "low"
+    },
+    {
+      "item": "Agent Office 開啟時自動觸發背景維護——待 Agent Office 支援對應事件機制後再串接（見 agent_office 欄位）",
+      "priority": "blocked_on_external"
+    }
+  ]
 }

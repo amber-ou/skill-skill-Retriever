@@ -1,1 +1,382 @@
-[]
+[
+  {
+    "skill_id": "140f7ab4ac9d",
+    "name": "ux-designer",
+    "repo": "szilu/ux-designer-skill",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "59cafde61ef",
+    "source_updated_at": "2026-09-19",
+    "popularity_score": 55,
+    "stars": 64,
+    "forks": 12,
+    "notion_page_id": "3e105064-114a-81ee-b6e3-f0e8119bbe79",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a81eeb6e3f0e8119bbe79",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "51df00b6a70e",
+    "name": "uiux",
+    "repo": "DietCokewithSugar/uiux-skills",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "608d84f7494",
+    "source_updated_at": "2026-09-04",
+    "popularity_score": 15,
+    "stars": 1,
+    "forks": 0,
+    "notion_page_id": "3e105064-114a-81fb-87d4-cd61e1e56795",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a81fb87d4cd61e1e56795",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "bc9c284e5a10",
+    "name": "ui-audit",
+    "repo": "tommygeoco/ui-audit",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "e7d63ecb8f8",
+    "source_updated_at": "2026-09-18",
+    "popularity_score": 35,
+    "stars": 25,
+    "forks": 2,
+    "notion_page_id": "3e105064-114a-81e7-86b9-c7b4a37e469d",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a81e786b9c7b4a37e469d",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "14b7ae22b3f5",
+    "name": "ux-flow-designer",
+    "repo": "ThomasPraun/ux-flow-designer",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "8401bd52487",
+    "source_updated_at": "2026-09-12",
+    "popularity_score": 35,
+    "stars": 11,
+    "forks": 1,
+    "notion_page_id": "3e105064-114a-81a1-885d-f15778579aac",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a81a1885df15778579aac",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "e4e5c026b7c1",
+    "name": "Mobile App Design Standards",
+    "repo": "awesome-skills/mobile-app-design",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "303875ae917",
+    "source_updated_at": "2026-09-18",
+    "popularity_score": 55,
+    "stars": 75,
+    "forks": 9,
+    "notion_page_id": "3e105064-114a-81a3-8544-c78f97fe862c",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a81a38544c78f97fe862c",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "cbef8a80b1bf",
+    "name": "design",
+    "repo": "sboghossian/design-skill",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "a6ad243bda8",
+    "source_updated_at": "2026-08-26",
+    "popularity_score": 15,
+    "stars": 4,
+    "forks": 0,
+    "notion_page_id": "3e105064-114a-8104-a0af-c504b064df0c",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a8104a0afc504b064df0c",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "bb21949b19c2",
+    "name": "ethux-design",
+    "repo": "konopkja/ethux-design",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "222655ac0b3",
+    "source_updated_at": "2026-09-15",
+    "popularity_score": 15,
+    "stars": 8,
+    "forks": 3,
+    "notion_page_id": "3e105064-114a-819d-929f-d646d0ddc583",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a819d929fd646d0ddc583",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "6cc595223461",
+    "name": "jobs-ive-design-architect",
+    "repo": "vxcozy/jobs-ive-design-architect",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "44e1241ab11",
+    "source_updated_at": "2026-03-30",
+    "popularity_score": 10,
+    "stars": 5,
+    "forks": 1,
+    "notion_page_id": "3e105064-114a-8187-94af-f51ef36f84ff",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a818794aff51ef36f84ff",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "6c53224206d3",
+    "name": "design-tokens",
+    "repo": "ilikescience/design-tokens-skill",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "fdb27a1c6ef",
+    "source_updated_at": "2026-08-25",
+    "popularity_score": 35,
+    "stars": 15,
+    "forks": 0,
+    "notion_page_id": "3e105064-114a-8110-880c-f3c26f0c5309",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a8110880cf3c26f0c5309",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "aa8f8ab8cb24",
+    "name": "design-system-library",
+    "repo": "aaldere1/awesome-design-systems",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "75ed362e6a7",
+    "source_updated_at": "2026-08-20",
+    "popularity_score": 35,
+    "stars": 10,
+    "forks": 0,
+    "notion_page_id": "3e105064-114a-816a-b9df-e649fc3a8f0b",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a816ab9dfe649fc3a8f0b",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "bc8f5c0bb74a",
+    "name": "ui-ux-pro-max",
+    "repo": "migueljnew-droid/ui-ux-gold-standard",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "c160edbe279",
+    "source_updated_at": "2026-09-02",
+    "popularity_score": 15,
+    "stars": 8,
+    "forks": 1,
+    "notion_page_id": "3e105064-114a-8155-b8c7-d67e4388ce9e",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a8155b8c7d67e4388ce9e",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "e587c88401c0",
+    "name": "figma-swiftui-ios26",
+    "repo": "rgehrkedk/figma-swiftui-ios26",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "25979546a7f",
+    "source_updated_at": "2026-05-20",
+    "popularity_score": 10,
+    "stars": 2,
+    "forks": 0,
+    "notion_page_id": "3e105064-114a-8107-979f-c33594e8e8c5",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a8107979fc33594e8e8c5",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "29483f6259ab",
+    "name": "ui-design-brain",
+    "repo": "carmahhawwari/ui-design-brain",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "2b66be738d0",
+    "source_updated_at": "2026-09-20",
+    "popularity_score": 75,
+    "stars": 886,
+    "forks": 74,
+    "notion_page_id": "3e105064-114a-810d-8d93-c40ddf6abf23",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a810d8d93c40ddf6abf23",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "44dd2a37f2cb",
+    "name": "design-system",
+    "repo": "albertzhangz10/design-system-skill",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "d440e6e2a91",
+    "source_updated_at": "2026-08-27",
+    "popularity_score": 35,
+    "stars": 38,
+    "forks": 0,
+    "notion_page_id": "3e105064-114a-810a-ac55-eea6c58c38ae",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a810aac55eea6c58c38ae",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "90c34c16344d",
+    "name": "figma-use",
+    "repo": "dannote/figma-use",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "71405ecd445",
+    "source_updated_at": "2026-09-20",
+    "popularity_score": 75,
+    "stars": 605,
+    "forks": 41,
+    "notion_page_id": "3e105064-114a-8101-8dea-e6006fa5555c",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a81018deae6006fa5555c",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "b4616b71eb63",
+    "name": "apple-hig",
+    "repo": "justinwetch/HIGAgentSkills",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "352c241db6b",
+    "source_updated_at": "2026-09-18",
+    "popularity_score": 75,
+    "stars": 329,
+    "forks": 15,
+    "notion_page_id": "3e105064-114a-8130-8a31-d7dd7cccd935",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a81308a31d7dd7cccd935",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "cc99639aed67",
+    "name": "nerv-ui",
+    "repo": "TheGreatGildo/nerv-ui",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "3ff2563c9e7",
+    "source_updated_at": "2026-09-20",
+    "popularity_score": 75,
+    "stars": 222,
+    "forks": 12,
+    "notion_page_id": "3e105064-114a-8164-b00a-e050c90d0725",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a8164b00ae050c90d0725",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "d0fc7135e441",
+    "name": "UX Wireframe Designer",
+    "repo": "williamzujkowski/cognitive-toolworks",
+    "skill_path": "skills/ux-wireframe-designer/SKILL.md",
+    "analyzed_commit": "355df7fc50c",
+    "source_updated_at": "2026-06-01",
+    "popularity_score": 10,
+    "stars": 6,
+    "forks": 0,
+    "notion_page_id": "3e105064-114a-8111-9229-f5086bde3890",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a81119229f5086bde3890",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "d1803efc3ad5",
+    "name": "figma-wireframe",
+    "repo": "OlliberK/figma-agent-loop",
+    "skill_path": "skills/figma-wireframe/SKILL.md",
+    "analyzed_commit": "ec48a0563bd",
+    "source_updated_at": "2026-03-07",
+    "popularity_score": 10,
+    "stars": 0,
+    "forks": 0,
+    "notion_page_id": "3e105064-114a-812d-8ebf-c07f1e00a225",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a812d8ebfc07f1e00a225",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  },
+  {
+    "skill_id": "3ffa6a196cea",
+    "name": "mobile-uiux-pro-max",
+    "repo": "noumanzindani/mobile-app-uiux-pro-max-skill",
+    "skill_path": "SKILL.md",
+    "analyzed_commit": "3c3199e686d",
+    "source_updated_at": "2026-07-06",
+    "popularity_score": 15,
+    "stars": 1,
+    "forks": 0,
+    "notion_page_id": "3e105064-114a-8149-b50b-c73f9096ce01",
+    "notion_page_url": "https://app.notion.com/p/3e105064114a8149b50bc73f9096ce01",
+    "recommendation_status": "待評估",
+    "last_check_attempted": "2026-09-20",
+    "last_check_succeeded": "2026-09-20",
+    "tags": [
+      "UI/UX"
+    ]
+  }
+]

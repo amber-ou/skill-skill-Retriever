@@ -1,1 +1,93 @@
-[]
+[
+  {
+    "pair": ["140f7ab4ac9d", "51df00b6a70e"],
+    "names": ["ux-designer (szilu)", "uiux (DietCokewithSugar)"],
+    "relation": "部分重疊",
+    "rationale": "兩者都是「通用 UI/UX 審查與建議」定位，觸發情境高度相似（審查介面、提出改善建議）；差異在於 szilu 版強調無障礙/國際化等具體檢查清單，DietCokewithSugar 版強調『先產生客製 UX 規則再審查』的流程。僅讀 frontmatter，無法確認實際檢查清單是否重複，故判定為部分重疊而非完全重複。",
+    "evidence": "兩者 SKILL.md description 片段",
+    "confidence": "low",
+    "checked_at": "2026-09-20",
+    "conditions": "在同一任務（審查一般網頁 UI）下適用；未核對實際規則內容"
+  },
+  {
+    "pair": ["140f7ab4ac9d", "cbef8a80b1bf"],
+    "names": ["ux-designer (szilu)", "design (sboghossian)"],
+    "relation": "部分重疊",
+    "rationale": "sboghossian/design 聲稱『合成』了 ui-ux-pro-max 等其他 Skill，其涵蓋範圍（審查、Figma 轉碼、色彩排版）與 ux-designer 有重疊，但也包含 ux-designer 未提及的『Figma 稿轉程式碼』能力，屬部分重疊而非單純重複。",
+    "evidence": "兩者 SKILL.md description 片段",
+    "confidence": "low",
+    "checked_at": "2026-09-20"
+  },
+  {
+    "pair": ["cbef8a80b1bf", "bc8f5c0bb74a"],
+    "names": ["design (sboghossian)", "ui-ux-pro-max (migueljnew-droid)"],
+    "relation": "待確認",
+    "rationale": "sboghossian/design 的 description 明確聲稱『合成』了名為 ui-ux-pro-max 的既有 Skill，暗示與本項目收錄的 migueljnew-droid/ui-ux-gold-standard（其 SKILL.md name 亦為 ui-ux-pro-max）可能有直接引用或衍生關係，但未核對是否為同一來源、是否已徵得授權，需人工確認來源鏈。",
+    "evidence": "sboghossian summary 提及『ui-ux-pro-max』；migueljnew-droid 的 SKILL.md frontmatter name 欄位即為 `ui-ux-pro-max`",
+    "confidence": "low",
+    "checked_at": "2026-09-20"
+  },
+  {
+    "pair": ["e4e5c026b7c1", "3ffa6a196cea"],
+    "names": ["Mobile App Design Standards (awesome-skills)", "mobile-uiux-pro-max (noumanzindani)"],
+    "relation": "重複",
+    "rationale": "兩者都是「跨平台行動 App UI/UX 設計與稽核」定位，皆涵蓋 iOS/Android、無障礙／WCAG；noumanzindani 版範圍更廣（多加 Flutter/RN/SwiftUI/Compose/Expo/Ionic/.NET MAUI 與 Material 3/Apple HIG iOS 26），屬功能高度重複，可视為同類目標下的競品，需再核對實際規則內容才能判斷是否其中一方可被取代。",
+    "evidence": "兩者 SKILL.md description 片段",
+    "confidence": "low",
+    "checked_at": "2026-09-20"
+  },
+  {
+    "pair": ["e587c88401c0", "90c34c16344d"],
+    "names": ["figma-swiftui-ios26 (rgehrkedk)", "figma-use (dannote)"],
+    "relation": "互補",
+    "rationale": "figma-use 提供操作 Figma 本身（建立/修改/匯出）的通用 CLI 能力；figma-swiftui-ios26 則是特定於「Figma 設計 ↔ SwiftUI 程式碼」雙向轉換的橋接邏輯，可在 figma-use 提供的操作能力之上運作，屬互補而非重疊。",
+    "evidence": "兩者 SKILL.md description 片段",
+    "confidence": "medium",
+    "checked_at": "2026-09-20"
+  },
+  {
+    "pair": ["14b7ae22b3f5", "d1803efc3ad5"],
+    "names": ["ux-flow-designer (ThomasPraun)", "figma-wireframe (OlliberK)"],
+    "relation": "部分重疊",
+    "rationale": "兩者都產生 wireframe／流程層級的產出，但 ux-flow-designer 側重 Mermaid 流程圖 + HTML wireframe + use case 文件，figma-wireframe 側重產生『可匯入 Figma 外掛的 JSON』；輸出格式不同，但任務目標（畫面/流程先行驗證）重疊。",
+    "evidence": "兩者 SKILL.md description 片段",
+    "confidence": "low",
+    "checked_at": "2026-09-20"
+  },
+  {
+    "pair": ["14b7ae22b3f5", "d0fc7135e441"],
+    "names": ["ux-flow-designer (ThomasPraun)", "UX Wireframe Designer (williamzujkowski)"],
+    "relation": "部分重疊",
+    "rationale": "兩者皆處理『使用者流程 + wireframe』產出，任務目標相近；williamzujkowski 版更著重業界標準符號與互動式 mockup，ThomasPraun 版更著重銜接 PRD 與可匯出 Figma。",
+    "evidence": "兩者 SKILL.md description 片段",
+    "confidence": "low",
+    "checked_at": "2026-09-20"
+  },
+  {
+    "pair": ["b4616b71eb63", "3ffa6a196cea"],
+    "names": ["apple-hig (justinwetch)", "mobile-uiux-pro-max (noumanzindani)"],
+    "relation": "互補",
+    "rationale": "noumanzindani 版在 description 中明確提及套用『Apple HIG（iOS 26 Liquid Glass）』，apple-hig 提供的正是該平台規則的權威參考來源，兩者可搭配使用（先查 HIG 規則、再套用到行動 App 設計流程）。",
+    "evidence": "noumanzindani summary 明確引用 Apple HIG；apple-hig 為專門的 HIG 參考 Skill",
+    "confidence": "medium",
+    "checked_at": "2026-09-20"
+  },
+  {
+    "pair": ["cc99639aed67", "140f7ab4ac9d"],
+    "names": ["nerv-ui (TheGreatGildo)", "ux-designer (szilu)"],
+    "relation": "無明顯關聯",
+    "rationale": "nerv-ui 是高度風格化、特定美術方向（Evangelion 主題）的元件庫，非通用 UX 方法論；與 ux-designer 這類通用審查/原則型 Skill 目標與適用情境不同，不構成競品關係。",
+    "evidence": "兩者 SKILL.md description 片段",
+    "confidence": "medium",
+    "checked_at": "2026-09-20"
+  },
+  {
+    "pair": ["bb21949b19c2", "140f7ab4ac9d"],
+    "names": ["ethux-design (konopkja)", "ux-designer (szilu)"],
+    "relation": "無明顯關聯",
+    "rationale": "ethux-design 是 Ethereum dApp 垂直領域的互動設計模式索引，與通用 UI/UX 審查 Skill 目標不同、任務情境不重疊（前者聚焦錢包/gas/簽署等 Web3 特定流程）。",
+    "evidence": "兩者 SKILL.md description 片段",
+    "confidence": "medium",
+    "checked_at": "2026-09-20"
+  }
+]
